@@ -11,10 +11,12 @@ document.addEventListener("DOMContentLoaded", function(event){
     /*===============
      Scroll Smoother
     =================*/
-
-    ScrollSmoother.create({
-        smooth: 2,
-        effects: true,
+    
+    mm.add("(min-width: 1025px)", () => {
+        ScrollSmoother.create({
+            smooth: 2,
+            effects: true,
+        });
     });
 
     /*======================
@@ -225,6 +227,8 @@ document.addEventListener("DOMContentLoaded", function(event){
                     scrub: true,
                     pin: true,
                     pinSpacing: true,
+                    invalidateOnRefresh: true,
+                    anticipatePin: 1,
                 },
                 opacity: 1,
                 duration: 0.5,
