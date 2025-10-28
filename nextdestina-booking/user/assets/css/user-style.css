@@ -1,0 +1,263 @@
+
+.dashboard-wrapper .message-container .chat-box .chat-box-bottom{
+    display: block;
+}
+.dashboard-wrapper .message-container .chat-box .chat-box-bottom textarea{
+    border-radius: 0;
+}
+
+.dashboard-wrapper .card .cmn-btn:focus,
+.dashboard-wrapper .card .cmn-btn:active{
+    font-family: "Roboto";
+}
+.dashboard-wrapper .card .cmn-btn:hover{
+    background-color: #033f1b;
+}
+
+.offcanvas .offcanvas-body form button{
+    background-color: #ff8e3f;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+}
+.offcanvas .offcanvas-body form button:hover{
+    background-color: #033f1b;
+}
+
+.dashboard-profile .nav .nav-item a.active:hover,
+.dashboard-profile .nav .nav-item a:hover{
+    color: #fff;
+    background-color: #033f1b;
+}
+.card .profile-details-section .btn-area .cmn-file-input:hover label{
+    background-color: #033f1b;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.file-upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5ede6;
+    border-radius: 6px 0 0 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    border: 1px solid #e5ded5;
+    height: 100%;
+}
+
+.file-upload-label i {
+    font-size: 16px;
+    color: #000000a6;
+}
+
+.file-upload-input {
+    display: none;
+}
+
+.file-preview-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.file-thumb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.file-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.file-remove-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+/*======================
+ Create Ticket
+========================*/
+
+#create-ticket-form{
+    max-width: 1080px;
+    margin: 80px auto 30px;
+}
+#create-ticket-form input[type="file"]{
+    height: inherit;
+}
+#nd-ticket-response{
+    max-width: 1080px;
+    margin: 0 auto 80px;
+}
+
+/*======================
+ Booking Details
+========================*/
+
+.card-block{
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-block .block-head{
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+}
+.card-block .block-head .title{
+    color: #fff;
+    margin-bottom: 0;
+}
+.card-block .block-head .title i{
+    display: inline-block;
+    color: var(--primary-color);
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.card-block .block-content{
+    background-color: #f1f1f1;
+    padding: 40px 40px 16px;
+}
+.card-block .block-content .box-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.card-block .block-content .box-group .box{
+    width: calc(50% - 12px);
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+.card-block .block-content .box-group .box .box-title{
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.card-block .block-content .box-group .box .box-title i{
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+.card-block .block-content .box-group .box table{
+    width: 100%;
+}
+.card-block .block-content .box-group .box table th,
+.card-block .block-content .box-group .box table td{
+    padding: 5px;
+}
+
+#invoice-download{
+    color: #fff;
+    background-color: #033f1b;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+@media (max-width: 991px){
+    .card-block .block-content .box-group .box{
+        width: 100%;
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 767px){
+    .card-block .block-content {
+        padding: 40px 20px 16px;
+    }
+}
+
+/*======================
+ Thank you page
+========================*/
+
+#thank-you-content{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+}
+#thank-you-content .title{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+#thank-you-content .description{
+    font-size: 20px;
+}
+#thank-you-content .btn-1{
+    margin-top: 50px;
+}
+#thank-you-content .copyright-text{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+/*======================
+ Booking cancel page
+========================*/
+
+#booking-cancel-content{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#booking-cancel-content .title{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+#booking-cancel-content .description{
+    font-size: 20px;
+}
+#booking-cancel-content .btn-1{
+    margin-top: 50px;
+}
+#booking-cancel-content .copyright-text{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+
+
+
+
+

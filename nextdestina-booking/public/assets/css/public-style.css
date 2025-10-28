@@ -1,0 +1,371 @@
+
+/* Add to your CSS */
+.suggestions-box {
+	position: absolute;
+	z-index: 999;
+	background: white;
+	box-shadow: 2px 1px 28.7px -2px rgba(155, 155, 155, 0.15);
+	border-radius: 5px;
+	max-height: 270px;
+	width: 100%;
+	overflow: auto;
+	display: none;
+}
+.suggestions-box .suggestion-item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #e5e7eb;
+	cursor: pointer;
+}
+.suggestions-box .suggestion-item:hover {
+	background-color: #f9f9f9;
+}
+.suggestions-box .suggestion-thumb img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+.suggestions-box .suggestion-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color-1);
+}
+
+/* ------------------------
+ Search
+--------------------------- */
+
+.tour-search.style-one .serach-title{
+	margin-bottom: 20px;
+}
+.tour-search.style-one .serach-title h6{
+	color: var(--text-color-1);
+	border-radius: 50px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+}
+.tour-search.style-one .serach-title h6 i{
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: #033f1b;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-size: 18px;
+}
+.tour-search.style-one .search-form form .location,
+.tour-search.style-one .search-form form .date,
+.tour-search.style-one .search-form form .count{
+    max-width: 320px;
+    width: 100%;
+    position: relative;
+}
+.tour-search.style-one .count{
+    position: relative;
+}
+.tour-search.style-one .count-counter{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--white-color);
+    width: 100%;
+    padding: 20px 12px 20px 32px;
+    border-radius: 8px;
+    border: 1px solid #E1E1E1;
+    overflow: hidden;
+}
+.tour-search.style-one .count-container {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #F3FAF7;
+    box-shadow: var(--shadow-1);
+    border-radius: 8px;
+    border: 1px solid #e8edea;
+    padding: 10px 20px;
+    z-index: 2;
+}
+.tour-search.style-one .search-form form .location i,
+.tour-search.style-one .search-form form .date i,
+.tour-search.style-one .search-form form .count i{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color-2);
+    font-size: 14px;
+    z-index: 1;
+}
+.tour-search.style-one .count-counter-inner{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tour-search.style-one .count-counter-inner span,
+.tour-search.style-one .count-counter-inner p{
+    color: var(--text-color-2);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+.tour-search.style-one .count-single{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white-color);
+    padding: 10px 0;
+}
+.tour-search.style-one .count-single:last-child{
+    border-bottom: none;
+}
+.tour-search.style-one .count-single-inner {
+    text-align: center;
+  }
+.tour-search.style-one .count-single-inner  button {
+    padding: 7px 15px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: #033f1b;
+    color: var(--white-color);
+    cursor: pointer;
+}
+.tour-search.style-one .count-single-inner span{
+    margin: 0 5px;
+}
+.tour-search.style-one .count-single-text h6{
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+}
+.tour-search.style-one .count-single-text p{
+    font-size: 14px;
+}
+
+.tour-search.style-one .search-form form input{
+    width: 100%;
+    padding: 19px 12px 19px 32px;
+    border-radius: 8px;
+    border: 1px solid #E1E1E1;
+    background: var(--white-color);
+}
+.tour-search.style-one .form-control {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 23px;
+    color: var(--text-color-2);
+    font-family: "Inter", sans-serif;
+}
+.tour-search.style-one .search-form form input::placeholder{
+    color: var(--text-color-2);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 28px;
+}
+.tour-search.style-one .form-control:disabled, .form-control[readonly] {
+    background-color: var(--white-color);
+    opacity: 1;
+}
+.tour-search.style-one .form-control:focus {
+    color: var(--text-color-2);
+    background-color: var(--white-color);
+    border-color: 1px solid #033f1b;
+    outline: 0;
+    box-shadow: none;
+}
+.tour-search.style-one .search-form form .btn-1 {
+	font-size: 18px;
+    width: 100%;
+    padding: 17px 24px;
+    background-color: #033f1b;
+    border-radius: 8px;
+}
+.tour-search.style-one .search-form form .btn-1 span{
+    background-color: var(--primary-color);
+}
+
+/* Style Two */
+
+.tour-search.style-two .serach-title h6 {
+	display: inline-block;
+	color: var(--text-color-1);
+	border-radius: 50px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.3;
+	display: flex;
+	align-items: center;
+}
+.tour-search.style-two .search-container {
+	position: relative;
+    z-index: 1;
+    padding: 40px 55px 48px;
+    border-radius: 16px;
+}
+.tour-search.style-two .search-container .bg-layer{
+    border-radius: 16px;
+    background: url(../images/search-bg-2.png);
+    background-size: cover;
+}
+.tour-search.style-two .search-form form{
+    max-width: 100%;
+}
+.tour-search.style-two .search-form .serach-title{
+    max-width: 250px;
+    margin-bottom: 48px;
+}
+.tour-search.style-two .search-form form .location,
+.tour-search.style-two .search-form form .date,
+.tour-search.style-two .search-form form .count{
+    width: 100%;
+    position: relative;
+}
+.tour-search.style-two .count{
+    position: relative;
+}
+.tour-search.style-two .count-counter{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--white-color);
+    width: 100%;
+    padding: 20px 12px 20px 32px;
+    border-radius: 8px;
+    border: 1px solid #E1E1E1;
+    overflow: hidden;
+}
+.tour-search.style-two .count-container {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #F3FAF7;
+    box-shadow: var(--shadow-1);
+    border-radius: 8px;
+    border: 1px solid #e8edea;
+    padding: 10px 20px;
+    z-index: 9;
+}
+.tour-search.style-two .search-form form input{
+    width: 100%;
+    padding: 19px 12px 19px 32px;
+    border-radius: 8px;
+    border: 1px solid #E1E1E1;
+    background: var(--white-color);
+}
+.tour-search.style-two .form-control {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 23px;
+    color: var(--text-color-2);
+    font-family: "Inter", sans-serif;
+}
+.tour-search.style-two .search-form form input::placeholder{
+    color: var(--text-color-2);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 28px;
+}
+.tour-search.style-two .form-control:disabled,
+.tour-search.style-two .form-control[readonly] {
+    background-color: var(--white-color);
+    opacity: 1;
+}
+.tour-search.style-two .form-control:focus {
+    color: var(--text-color-2);
+    background-color: var(--white-color);
+    border-color: 1px solid #033f1b;
+    outline: 0;
+    box-shadow: none;
+}
+.tour-search.style-two .search-form form .btn-1 {
+	font-size: 18px;
+    width: 100%;
+    padding: 17px 24px;
+    background-color: #033f1b;
+    border-radius: 8px;
+}
+.tour-search.style-two .search-form form .btn-1 i{
+    font-size: 20px;
+    margin-left: 0;
+}
+.tour-search.style-two .search-form form .btn-1 span{
+    background-color: var(--primary-color);
+}
+.tour-search.style-two .search-form form .location i,
+.tour-search.style-two .search-form form .date i,
+.tour-search.style-two .search-form form .count i{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color-2);
+    font-size: 14px;
+    z-index: 1;
+}
+.tour-search.style-two .count-counter-inner{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tour-search.style-two .count-counter-inner span, .count-counter-inner p{
+    color: var(--text-color-2);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+.tour-search.style-two .count-single{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white-color);
+    padding: 10px 0;
+}
+.tour-search.style-two .count-single:last-child{
+    border-bottom: none;
+}
+.tour-search.style-two .count-single-inner {
+    text-align: center;
+  }
+.tour-search.style-two .count-single-inner  button {
+    padding: 7px 15px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: #033f1b;
+    color: var(--white-color);
+    cursor: pointer;
+}
+.tour-search.style-two .count-single-inner span{
+    margin: 0 5px;
+}
+.tour-search.style-two .count-single-text h6{
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 18px;
+}
+.tour-search.style-two .count-single-text p{
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 479px){
+
+    .tour-search.style-two .search-container {
+        z-index: 1;
+        padding: 40px 20px 48px;
+    }
+}

@@ -1,0 +1,831 @@
+
+/*===============
+ Meta Box
+=================*/
+
+.postbox .inside{
+	padding: 20px;
+}
+.meta-box-group {
+	margin-bottom: 20px;
+	background: #fff;
+	border: 1px solid rgba(231, 234, 243, 0.7);
+	box-shadow: 0 .375rem .75rem rgba(140, 152, 164, .075);
+	border-radius: 10px;
+}
+.meta-box-group .group-head{
+	border-bottom: 1px solid rgba(231, 234, 243, 0.7);
+	padding: 16px 20px;
+}
+.meta-box-group .group-head h4 {
+	color: #1e2022;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0;
+}
+.meta-box-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	padding: 20px 20px 30px;
+}
+.field {
+	display: flex;
+	flex-direction: column;
+}
+.field label{
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+.field input[type="text"],
+.field input[type="password"]{
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	outline: 0;
+	border: 1px solid rgba(231,234,243,.7);
+	border-radius: 5px;
+	box-shadow: none;
+	transition: 0.3s;
+}
+.field input:focus{
+	border-color: #2271b1;
+}
+.field textarea{
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	outline: 0;
+	border: 1px solid rgba(231,234,243,.7);
+	border-radius: 5px;
+	box-shadow: none;
+	transition: 0.3s;
+}
+.field textarea:focus{
+	border-color: #2271b1;
+}
+
+.secret-input-wrapper {
+    position: relative;
+}
+
+.secret-input-wrapper input[type="password"],
+.secret-input-wrapper input[type="text"] {
+	width: 100%;
+    padding-right: 37px;
+}
+
+.toggle-secret {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-65%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.field button{
+	width: fit-content;
+}
+.meta-box-group .field .logo-preview{
+	margin-bottom: 10px;
+}
+.meta-box-group .field .logo-preview img{
+	max-width: 150px;
+}
+
+.meta-box-grid .available-shortcode table{
+	width: 100%;
+}
+.meta-box-grid .available-shortcode table th{
+	text-align: left;
+	width: 50%;
+}
+.meta-box-grid .available-shortcode table td{
+	border-top: 1px solid rgba(231,234,243,.7);
+}
+
+/* Payment */
+
+.nd-payment-field {
+	margin-bottom:10px;
+	display:flex;
+	align-items:center;
+	gap:5px;
+}
+.nd-payment-field input,
+.nd-payment-field select,
+.nd-payment-field textarea {
+	margin-right:5px;
+}
+.nd-payment-field select.field-type {
+	width: 120px;
+}
+.nd-payment-field input[type=text],
+.nd-payment-field textarea {
+	width: 200px;
+}
+.nd-payment-field textarea {
+	height: 60px;
+}
+.handle {
+	font-size:18px;
+}
+
+/*=================
+ Payment Log modal
+===================*/
+
+.nd-payment-modal {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+}
+
+.nd-payment-content {
+    background: #fff;
+    padding: 25px;
+    width: 600px;
+    max-width: 95%;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.nd-payment-content .title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nd-payment-content .info-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nd-payment-content .info-grid div {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin: 0 5px;
+    background: #fafafa;
+}
+
+.nd-payment-content .subtitle {
+    font-size: 16px;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+.nd-payment-content .summary-box {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    background: #fafafa;
+}
+
+.nd-payment-content .summary-box p {
+    margin: 8px 0;
+}
+
+.nd-payment-content .feedback {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.nd-payment-content .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.nd-payment-content .button {
+    border-radius: 6px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.nd-payment-content .button-primary {
+    background: #10b981; /* green */
+    color: #fff;
+    border: none;
+}
+
+.nd-payment-content .button-secondary {
+    background: #ef4444; /* red */
+    color: #fff;
+    border: none;
+}
+
+.nd-payment-content .close-btn {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    font-size: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+	width: 30px;
+	background: #ef4444;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	border-radius: 5px;
+}
+
+/*======================
+ Tour Gallery Metabox
+========================*/
+
+#nextdestina-tour-gallery-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+#nextdestina-tour-gallery-container .gallery-thumb {
+	position: relative;
+	display: inline-block;
+}
+#nextdestina-tour-gallery-container .gallery-thumb img {
+	width: 100px;
+	height: auto;
+	display: block;
+}
+#nextdestina-tour-gallery-container .gallery-thumb .remove-image {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background: #f44336;
+	color: white;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	height: 18px;
+	width: 18px;
+	line-height: 15px;
+}
+
+/*======================
+ Email Template Metabox
+========================*/
+
+.field .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+.field .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.field .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+.field .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+.field .switch input:checked + .slider {
+  background-color: #377dff;
+}
+.field .switch input:checked + .slider:before {
+  transform: translateX(15px);
+}
+.field .slider.round {
+  border-radius: 24px;
+}
+.field .slider.round:before {
+  border-radius: 50%;
+}
+
+/*======================
+ Payment Method OFF/ON
+========================*/
+
+.payment-switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+}
+.payment-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.payment-switch .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+	border-radius: 20px;
+}
+.payment-switch .slider:before {
+	position: absolute;
+	content: "";
+	height: 14px;
+	width: 14px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+}
+.payment-switch input:checked + .slider {
+	background-color: #4CAF50;
+}
+.payment-switch input:checked + .slider:before {
+	transform: translateX(20px);
+}
+
+/*======================
+ Booking History Table
+========================*/
+
+.status .pending{
+	color: #fff;
+	background-color: #F29339;
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+.status .confirmed{
+	color: #fff;
+	background-color: #2AA856;
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+.status .cancelled{
+	color: #fff;
+	background-color: #f00;
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+
+.payment_status .pending{
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	background-color: #F29339;
+	padding: 3px 8px;
+	border-radius: 20px;
+}
+.payment_status .rejected{
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	background-color: #DB3B3B;
+	padding: 3px 8px;
+	border-radius: 20px;
+}
+.payment_status .completed,
+.payment_status .succeeded{
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	background-color: #2AA856;
+	padding: 3px 8px;
+	border-radius: 20px;
+}
+
+/*======================
+ Dashboard
+========================*/
+
+.nd-dashboard-wrap {
+	padding: 20px;
+}
+.nd-dashboard-wrap .page-header{
+	border-bottom: 1px solid rgba(231, 234, 243, 0.7);
+	padding-bottom: 32px;
+	margin-bottom: 36px;
+}
+.nd-dashboard-wrap .page-header .page-title{
+	font-size: 23px;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+.nd-db-card {
+    border: 1px solid rgba(231, 234, 243, 0.7);
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 .375rem .75rem rgba(140, 152, 164, .075);
+    margin-bottom: 24px;
+}
+.nd-db-card .nd-chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    border-bottom: 1px solid rgba(231, 234, 243, 0.7);
+}
+.nd-db-card .nd-chart-header .card-title{
+	font-size: 17px;
+	font-weight: 600;
+}
+.nd-db-card .nd-chart-header #nd-chart-months{
+	background-color: #f8fafd;
+	padding: .25rem .25rem;
+	border-radius: .5rem;
+}
+.nd-db-card .nd-chart-body{
+	padding: 20px 20px;
+}
+.nd-db-card .nd-chart-body .deposit{
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.nd-db-card #nd-chart-months button {
+	color: #677788;
+    background: none;
+    border: none;
+	font-size: .8125rem;
+	padding: .5rem .8125rem;
+	border-radius: .5rem;
+    cursor: pointer;
+}
+.nd-db-card #nd-chart-months button.active {
+	color: #1e2022;
+	background-color: #fff;
+	box-shadow: 0 .1875rem .375rem 0 rgba(140,152,164,.25);
+    border-radius: 5px;
+}
+
+.nd-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.nd-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 55px 20px;
+    border: 1px solid rgba(231, 234, 243, 0.7);
+    box-shadow: 0 .375rem .75rem rgba(140, 152, 164, .075);
+    transition: all 0.3s ease;
+}
+.nd-card i {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e7e7ff;
+    color: #6371f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0px 18px 0;
+}
+.nd-card h4 {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+.nd-card .count {
+    font-size: 32px;
+    font-weight: bold;
+}
+.nd-card .change {
+    font-size: 14px;
+    color: #777;
+}
+.nd-card .up {
+    color: green;
+}
+.nd-card .down {
+    color: red;
+}
+.nd-card.loading {
+    background: #f9f9f9;
+    color: #ccc;
+    text-align: center;
+}
+.nd-card .title{
+	text-transform: uppercase;
+	color: #8c98a4;
+	font-size: 12px;
+	font-weight: 600;
+	margin: 0 0 10px;
+}
+.nd-card .number{
+	color: #1e2022;
+	font-size: 21px;
+	font-weight: 600;
+}
+
+.nd-db-card .nd-top-destinations{
+	margin: 0;
+	padding: 0;
+}
+.nd-db-card .nd-top-destinations li{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 0 8px;
+	border-bottom: 1px solid #e7eaf3;
+}
+.nd-db-card .nd-top-destinations li:last-child{
+	border-bottom: 0;
+}
+.nd-db-card .nd-top-destinations li img{
+	height: 40px;
+	width: 40px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.nd-db-card .nd-top-destinations li a{
+	color: #1e2022;
+	font-size: 14px;
+	text-decoration: none;
+	transition: 0.3s;
+}
+.nd-db-card .nd-top-destinations li a:hover{
+	color: #6371f8;
+}
+.nd-db-card .nd-top-destinations li a:focus{
+	box-shadow: none;
+}
+
+.nd-db-card .nd-top-tours{
+	margin: 0;
+	padding: 0;
+}
+.nd-db-card .nd-top-tours li{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 0 8px;
+	border-bottom: 1px solid #e7eaf3;
+}
+.nd-db-card .nd-top-tours li:last-child{
+	border-bottom: 0;
+}
+.nd-db-card .nd-top-tours li img{
+	height: 40px;
+	width: 40px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.nd-db-card .nd-top-tours li a{
+	color: #1e2022;
+	font-size: 14px;
+	text-decoration: none;
+	transition: 0.3s;
+}
+.nd-db-card .nd-top-tours li a:hover{
+	color: #6371f8;
+}
+.nd-db-card .nd-top-tours li a:focus{
+	box-shadow: none;
+}
+
+.nd-db-card .nd-chart-header #nd-destination-months{
+	background-color: #f8fafd;
+	padding: .25rem .25rem;
+	border-radius: .5rem;
+}
+.nd-db-card .nd-chart-header #nd-destination-months button{
+	color: #677788;
+	background: none;
+	border: none;
+	font-size: .8125rem;
+	padding: .5rem .8125rem;
+	border-radius: .5rem;
+	cursor: pointer;
+}
+.nd-db-card .nd-chart-header #nd-destination-months button.active{
+	color: #1e2022;
+	background-color: #fff;
+	box-shadow: 0 .1875rem .375rem 0 rgba(140,152,164,.25);
+	border-radius: 5px;
+}
+
+.nd-db-card .nd-chart-header #nd-packages-months{
+	background-color: #f8fafd;
+	padding: .25rem .25rem;
+	border-radius: .5rem;
+}
+.nd-db-card .nd-chart-header #nd-packages-months button{
+	color: #677788;
+	background: none;
+	border: none;
+	font-size: .8125rem;
+	padding: .5rem .8125rem;
+	border-radius: .5rem;
+	cursor: pointer;
+}
+.nd-db-card .nd-chart-header #nd-packages-months button.active{
+	color: #1e2022;
+	background-color: #fff;
+	box-shadow: 0 .1875rem .375rem 0 rgba(140,152,164,.25);
+	border-radius: 5px;
+}
+
+/*======================
+ Support Ticket Table
+========================*/
+
+.ticket_status .red{
+	color: #fff;
+	background-color: rgb(220,53,69);
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+.ticket_status .blue{
+	color: #fff;
+	background-color: rgb(13,110,253);
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+.ticket_status .green{
+	color: #fff;
+	background-color: #2AA856;
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+.ticket_status .orange{
+	color: #fff;
+	background-color: rgb(255,193,7);
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+.ticket_status .cyan{
+	color: #fff;
+	background-color: rgb(13,202,240);
+	padding: 5px 10px;
+	border-radius: 20px;
+}
+
+/*======================
+ Support Ticket Details
+========================*/
+
+.admin-chat-group .chat-list{
+	padding: 40px;
+}
+.admin-chat-group .chat-list .title{
+	margin-top: 0;
+}
+.admin-chat-group .chat-list .ticket-replies{
+	background-color: #EFF3F8;
+	border-radius: 20px;
+	max-height: 500px;
+	overflow: auto;
+}
+.admin-chat-group .chat-list .reply{
+	display: flex;
+	align-items: start;
+	margin-bottom: 20px;
+	padding: 15px 20px;
+	border-bottom: 1px solid rgb(231, 234, 243);
+	border-radius: 5px;
+}
+.admin-chat-group .chat-list .reply:last-child{
+	border-bottom: 0;
+}
+.admin-chat-group .chat-list .admin-reply{
+	justify-content: end;
+	flex-direction: row-reverse;
+}
+.admin-chat-group .chat-list .admin-reply .author .image{
+	margin: 0 0 0 10px;
+}
+.admin-chat-group .chat-list .admin-reply p{
+	text-align: right;
+}
+.admin-chat-group .chat-list .reply .content{
+	background-color: #fff;
+	padding: 5px 10px;
+    border-radius: 15px;
+}
+.admin-chat-group .chat-list .reply .image{
+	margin-right: 10px;
+}
+.admin-chat-group .chat-list .reply .image img{
+	border-radius: 50%;
+}
+.admin-chat-group .chat-list .reply p{
+	margin: 0;
+}
+.admin-chat-group .chat-form{
+	padding: 0 40px 40px;
+}
+.admin-chat-group .chat-form textarea {
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	outline: 0;
+	border: 1px solid rgba(231, 234, 243, 0.9);
+	border-radius: 5px;
+	box-shadow: none;
+	transition: 0.3s;
+}
+.admin-chat-group .chat-form textarea:focus {
+	border-color: #2271b1;
+}
+
+/*==============
+ Tour Ratings
+================*/
+
+.tour_ratings .status .approved{
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    background-color: #2AA856;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+.tour_ratings .status .pending{
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    background-color: #F29339;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+/*==============
+ Settings
+================*/
+
+.switch-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.switch-toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.switch-toggle input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+.switch-toggle input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+

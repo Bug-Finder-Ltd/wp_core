@@ -1,0 +1,2222 @@
+# Copyright (C) 2025 bug-finder
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextdestina Booking 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/nextdestina-booking\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-08-20T10:30:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: nextdestina-booking\n"
+
+#. Plugin Name of the plugin
+#: nextdestina-booking.php
+#: nextdestina-booking.php:966
+msgid "Nextdestina Booking"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: nextdestina-booking.php
+msgid "https://bugfinder.net/nextdestina-booking"
+msgstr ""
+
+#. Description of the plugin
+#: nextdestina-booking.php
+msgid "Handle the basics with this plugin."
+msgstr ""
+
+#. Author of the plugin
+#: nextdestina-booking.php
+msgid "bug-finder"
+msgstr ""
+
+#. Author URI of the plugin
+#: nextdestina-booking.php
+msgid "https://bugfinder.net/"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:194
+#: admin/class-nextdestina-admin.php:195
+#: templates/dashboard-master.php:49
+msgid "Booking History"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:202
+#: admin/class-nextdestina-admin.php:203
+#: admin/class-nextdestina-admin.php:729
+msgid "Payment Logs"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:224
+#: admin/class-nextdestina-admin.php:537
+msgid "Tour Ratings"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:225
+msgid "Ratings"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:232
+#: admin/class-nextdestina-admin.php:233
+msgid "Settings"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:380
+#: templates/dashboard-master.php:45
+msgid "Dashboard"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:388
+msgid "Transaction"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:390
+#: admin/class-nextdestina-admin.php:418
+#: admin/class-nextdestina-admin.php:450
+msgid "This Month"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:391
+#: admin/class-nextdestina-admin.php:419
+#: admin/class-nextdestina-admin.php:451
+msgid "Last Month"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:395
+msgid "Payments Received:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:395
+msgid "$0.00"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:403
+msgid "Total Travelers:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:404
+msgid "Confirmed Bookings:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:405
+msgid "This Month Transactions:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:405
+#: admin/class-nextdestina-admin.php:406
+msgid "$"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:406
+msgid "Total Transactions:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:416
+msgid "Top Destination"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:448
+msgid "Top Packages"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:540
+msgid "No ratings found."
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:668
+#, php-format
+msgid "Booking Details (#%d)"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:679
+msgid "Travelers"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:691
+msgid "All Tour Bookings"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:696
+msgid "Search Bookings"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:701
+#: templates/pages/favorites.php:78
+#: templates/pages/history.php:148
+#: templates/pages/payments.php:79
+msgid "Filter"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:734
+msgid "From:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:735
+msgid "To:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:737
+msgid "Search Payments"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:770
+#: includes/class-cpt.php:71
+msgid "Invoice"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:771
+#: includes/elementor/tour-search.php:202
+msgid "Style"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:782
+#: admin/partials/payment-metabox/metabox-general.php:14
+msgid "Logo"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:786
+msgid "Upload Image"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:787
+msgid "Remove"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:791
+msgid "Address"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:797
+msgid "Phone Number"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:810
+msgid "Primary Color"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:831
+msgid "Payment Methods"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:832
+#: templates/pages/booking-details.php:203
+msgid "Payment Method"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:833
+#: admin/class-nextdestina-admin.php:834
+msgid "Add Method"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:835
+msgid "New Method"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:858
+msgid "Email Templates"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:859
+#: admin/class-nextdestina-admin.php:915
+msgid "Email Template"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:860
+#: admin/class-nextdestina-admin.php:861
+msgid "Add Template"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:862
+msgid "New Template"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:906
+msgid "Payment Settings"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:924
+msgid "Packages Setings"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:933
+msgid "Reply to Ticket"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:942
+msgid "Ticket Status"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1153
+msgid "Enabled"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1247
+msgid "Attach files:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1250
+msgid "Send Reply"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1380
+msgid "Hi {customer_name},<br><br>You have received a new reply to your support ticket #{ticket_id}.<br><br><strong>Message:</strong><br>{message}<br><br>You can view the full conversation at: <a href=\"{ticket_link}\">{ticket_link}</a>"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1391
+#, php-format
+msgid "New Reply to Ticket #%d"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1504
+msgid "Current Status:"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1511
+msgid "Close Ticket"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1517
+msgid "Reopen Ticket"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1551
+#: admin/partials/class-booking-log.php:16
+#: admin/partials/class-payment-log.php:16
+#: templates/pages/history.php:164
+#: templates/pages/history.php:199
+#: templates/pages/history.php:302
+#: templates/pages/home.php:192
+#: templates/pages/home.php:226
+msgid "Status"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1581
+#: templates/pages/tickets.php:31
+msgid "Last Reply"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1594
+msgid "No replies"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1611
+msgid "Open"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1612
+msgid "Answered"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1613
+msgid "Replied"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1614
+#: templates/pages/history.php:305
+msgid "Pending"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1615
+msgid "Closed"
+msgstr ""
+
+#: admin/class-nextdestina-admin.php:1619
+msgid "All Statuses"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:11
+msgid "ID"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:12
+msgid "Tour"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:13
+msgid "Travel Date"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:14
+msgid "Travellers"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:15
+#: templates/pages/payments.php:93
+#: templates/pages/payments.php:110
+msgid "Total Price"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:17
+msgid "Contact"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:18
+msgid "Actions"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:36
+msgid "Confirm"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:37
+msgid "Cancel"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:38
+#: admin/partials/class-payment-log.php:152
+msgid "Delete"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:47
+#: nextdestina-booking.php:794
+#: nextdestina-booking.php:819
+msgid "Security check failed."
+msgstr ""
+
+#: admin/partials/class-booking-log.php:188
+msgid "View Details"
+msgstr ""
+
+#: admin/partials/class-booking-log.php:190
+#: templates/pages/booking-details.php:221
+#: templates/pages/history.php:213
+#: templates/pages/home.php:240
+msgid "Download Invoice"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:12
+#: admin/partials/email-metabox/admin-email.php:101
+#: admin/partials/email-metabox/traveler-email.php:87
+#: templates/pages/history.php:159
+#: templates/pages/history.php:182
+#: templates/pages/history.php:278
+#: templates/pages/home.php:187
+#: templates/pages/home.php:209
+#: templates/pages/payments.php:91
+#: templates/pages/payments.php:104
+msgid "Booking ID"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:13
+msgid "Traveler"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:14
+#: admin/partials/email-metabox/admin-email.php:159
+#: templates/pages/payments.php:95
+#: templates/pages/payments.php:118
+#: templates/pages/payments.php:166
+msgid "Transaction ID"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:15
+#: public/templates/tour-booking-form.php:410
+msgid "Amount"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:17
+#: templates/pages/payments.php:92
+msgid "Method"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:18
+#: admin/partials/payment-metabox/metabox-manual.php:41
+#: templates/pages/payments.php:96
+#: templates/pages/payments.php:121
+msgid "Date"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:19
+#: templates/pages/favorites.php:93
+#: templates/pages/favorites.php:125
+#: templates/pages/history.php:165
+#: templates/pages/history.php:202
+#: templates/pages/home.php:193
+#: templates/pages/home.php:229
+#: templates/pages/tickets.php:33
+msgid "Action"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:121
+#: templates/tour-details.php:256
+msgid "Guest"
+msgstr ""
+
+#: admin/partials/class-payment-log.php:139
+msgid "View"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:57
+msgid "New Booking"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:61
+msgid "Admin Email Subject"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:69
+#: admin/partials/email-metabox/admin-email.php:123
+#: admin/partials/email-metabox/admin-email.php:181
+#: admin/partials/email-metabox/admin-email.php:243
+#: admin/partials/email-metabox/traveler-email.php:55
+#: admin/partials/email-metabox/traveler-email.php:109
+#: admin/partials/email-metabox/traveler-email.php:143
+msgid "Enable status for email notification."
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:72
+msgid "Admin Email Message"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:90
+#: admin/partials/email-metabox/admin-email.php:144
+#: admin/partials/email-metabox/admin-email.php:202
+#: admin/partials/email-metabox/admin-email.php:264
+#: admin/partials/email-metabox/traveler-email.php:76
+#: admin/partials/email-metabox/traveler-email.php:164
+msgid "Shortcode"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:91
+#: admin/partials/email-metabox/admin-email.php:145
+#: admin/partials/email-metabox/admin-email.php:203
+#: admin/partials/email-metabox/admin-email.php:265
+#: admin/partials/email-metabox/traveler-email.php:77
+#: admin/partials/email-metabox/traveler-email.php:165
+#: admin/partials/payment-metabox/metabox-general.php:22
+#: admin/partials/payment-metabox/metabox-manual.php:15
+#: includes/elementor/tour-search.php:165
+msgid "Description"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:97
+msgid "User Email"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:111
+msgid "Payment"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:115
+msgid "Admin Payment Subject"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:126
+msgid "Admin Payment Message"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:151
+#: admin/partials/email-metabox/admin-email.php:209
+#: admin/partials/email-metabox/admin-email.php:271
+#: admin/partials/email-metabox/traveler-email.php:83
+msgid "User Name"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:155
+msgid "Total Paid amount"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:169
+msgid "Support Request"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:173
+msgid "Admin Ticket Subject"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:184
+msgid "Admin Ticket Message"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:213
+#: admin/partials/email-metabox/admin-email.php:275
+#: templates/pages/tickets.php:29
+msgid "Subject"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:217
+#: admin/partials/email-metabox/admin-email.php:279
+#: admin/partials/email-metabox/traveler-email.php:175
+#: public/templates/tour-booking-form.php:156
+msgid "Message"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:221
+msgid "Attachment"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:231
+msgid "Support User Reply"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:235
+msgid "Reply Ticket Subject"
+msgstr ""
+
+#: admin/partials/email-metabox/admin-email.php:246
+msgid "User Reply Message"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:43
+msgid "Booking Confirmation"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:47
+msgid "User Email Subject"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:58
+msgid "User Email Message"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:97
+msgid "Password Reset"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:101
+msgid "Reset Password Subject"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:112
+msgid "Reset Password Message"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:131
+msgid "Support Reply"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:135
+msgid "Support Reply Subject"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:146
+msgid "Support Reply Message"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:171
+msgid "Ticket ID"
+msgstr ""
+
+#: admin/partials/email-metabox/traveler-email.php:179
+msgid "Ticket Link"
+msgstr ""
+
+#: admin/partials/package-metabox/package-info.php:18
+msgid "Package Info"
+msgstr ""
+
+#: admin/partials/package-metabox/package-info.php:22
+msgid "Location"
+msgstr ""
+
+#: admin/partials/package-metabox/package-info.php:26
+msgid "Discount"
+msgstr ""
+
+#: admin/partials/package-metabox/package-info.php:30
+msgid "Tour Gallery Images"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-general.php:10
+msgid "General Settings"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-general.php:19
+msgid "Upload"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:10
+msgid "Payment Description"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:25
+msgid "Field Name"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:26
+msgid "Input Type"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:27
+msgid "Validation"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:37
+msgid "Text"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:38
+msgid "Number"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:39
+msgid "File Upload"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:40
+msgid "Textarea"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:46
+msgid "Required"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:47
+msgid "Optional"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-manual.php:55
+msgid "+ Add Field"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-paypal.php:10
+#: admin/partials/payment-metabox/metabox-stripe.php:10
+msgid "Parameters"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-paypal.php:14
+msgid "Client Id"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-paypal.php:18
+msgid "Secret"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-paypal.php:25
+#: admin/partials/payment-metabox/metabox-stripe.php:28
+msgid "Percentage Charge"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-paypal.php:31
+#: admin/partials/payment-metabox/metabox-stripe.php:34
+msgid "Fixed Charge"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-stripe.php:14
+msgid "Secret Key"
+msgstr ""
+
+#: admin/partials/payment-metabox/metabox-stripe.php:21
+msgid "Publishable Key"
+msgstr ""
+
+#: includes/class-assets.php:108
+msgid "Loading..."
+msgstr ""
+
+#: includes/class-assets.php:109
+msgid "An error occurred."
+msgstr ""
+
+#: includes/class-assets.php:110
+msgid "Are you sure you want to delete this?"
+msgstr ""
+
+#: includes/class-cpt.php:18
+msgctxt "Post Type General Name"
+msgid "Packages"
+msgstr ""
+
+#: includes/class-cpt.php:19
+msgctxt "Post Type Singular Name"
+msgid "Package"
+msgstr ""
+
+#: includes/class-cpt.php:20
+msgid "Manage Package"
+msgstr ""
+
+#: includes/class-cpt.php:21
+#: templates/pages/booking-details.php:83
+#: templates/pages/favorites.php:90
+#: templates/pages/favorites.php:111
+msgid "Package"
+msgstr ""
+
+#: includes/class-cpt.php:22
+msgid "Item Archives"
+msgstr ""
+
+#: includes/class-cpt.php:23
+msgid "Item Attributes"
+msgstr ""
+
+#: includes/class-cpt.php:24
+msgid "Parent Item:"
+msgstr ""
+
+#: includes/class-cpt.php:25
+msgid "All Packages"
+msgstr ""
+
+#: includes/class-cpt.php:26
+msgid "Add Package"
+msgstr ""
+
+#: includes/class-cpt.php:27
+msgid "Add New"
+msgstr ""
+
+#: includes/class-cpt.php:28
+msgid "New Item"
+msgstr ""
+
+#: includes/class-cpt.php:29
+msgid "Edit Item"
+msgstr ""
+
+#: includes/class-cpt.php:30
+msgid "Update Item"
+msgstr ""
+
+#: includes/class-cpt.php:31
+msgid "View Item"
+msgstr ""
+
+#: includes/class-cpt.php:32
+msgid "View Items"
+msgstr ""
+
+#: includes/class-cpt.php:33
+msgid "Search Item"
+msgstr ""
+
+#: includes/class-cpt.php:34
+msgid "Not found"
+msgstr ""
+
+#: includes/class-cpt.php:35
+msgid "Not found in Trash"
+msgstr ""
+
+#: includes/class-cpt.php:36
+msgid "Featured Image"
+msgstr ""
+
+#: includes/class-cpt.php:37
+msgid "Set featured image"
+msgstr ""
+
+#: includes/class-cpt.php:38
+msgid "Remove featured image"
+msgstr ""
+
+#: includes/class-cpt.php:39
+msgid "Use as featured image"
+msgstr ""
+
+#: includes/class-cpt.php:40
+msgid "Insert into item"
+msgstr ""
+
+#: includes/class-cpt.php:41
+msgid "Uploaded to this item"
+msgstr ""
+
+#: includes/class-cpt.php:42
+msgid "Items list"
+msgstr ""
+
+#: includes/class-cpt.php:43
+msgid "Items list navigation"
+msgstr ""
+
+#: includes/class-cpt.php:44
+msgid "Filter items list"
+msgstr ""
+
+#: includes/class-cpt.php:70
+msgid "Invoices"
+msgstr ""
+
+#: includes/class-global.php:69
+msgid "review"
+msgid_plural "reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-invoice-pdf.php:159
+#: includes/email-invoice.php:135
+msgid "Booking ID:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:160
+#: includes/email-invoice.php:136
+msgid "Date:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:161
+#: includes/email-invoice.php:137
+msgid "Receipt:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:164
+#: includes/email-invoice.php:140
+msgid "Customer Name:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:165
+#: includes/email-invoice.php:141
+#: public/templates/tour-booking-form.php:175
+msgid "Email:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:166
+msgid "Payment Method:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:172
+#: includes/email-invoice.php:148
+msgid "Item Details"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:176
+#: includes/email-invoice.php:152
+msgid "Item"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:177
+#: includes/email-invoice.php:153
+#: templates/pages/favorites.php:128
+#: templates/pages/history.php:209
+#: templates/pages/home.php:236
+msgid "Details"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:178
+#: includes/email-invoice.php:154
+msgid "Amount (USD)"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:183
+#: includes/email-invoice.php:159
+msgid "Tour Booking"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:186
+#: includes/email-invoice.php:162
+#: templates/pages/history.php:233
+msgid "Travel Date:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:187
+#: includes/email-invoice.php:163
+msgid "Persons:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:197
+#: includes/email-invoice.php:173
+msgid "Sub Total:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:198
+#: includes/class-invoice-pdf.php:210
+#: includes/email-invoice.php:174
+#: includes/email-invoice.php:186
+#: templates/pages/payments.php:112
+msgid "USD"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:201
+#: includes/email-invoice.php:177
+msgid "Discount:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:202
+#: includes/class-invoice-pdf.php:206
+#: includes/email-invoice.php:178
+#: includes/email-invoice.php:182
+msgid "USD 0"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:205
+#: includes/email-invoice.php:181
+msgid "Convenience Charge:"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:209
+#: includes/email-invoice.php:185
+msgid "Total Payment (Refundable):"
+msgstr ""
+
+#: includes/class-invoice-pdf.php:215
+#: includes/email-invoice.php:191
+msgid "Need Help?"
+msgstr ""
+
+#: includes/class-payment-methods.php:134
+msgid "Invalid nonce"
+msgstr ""
+
+#: includes/class-payment-methods.php:178
+msgid "Could not create booking."
+msgstr ""
+
+#: includes/class-payment-methods.php:258
+msgid "Booking created, pending manual payment."
+msgstr ""
+
+#: includes/class-payment-methods.php:385
+msgid "Feedback"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:14
+msgid "Tour Destination"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:30
+#: includes/elementor/tour-packages.php:30
+#: includes/elementor/tour-search.php:34
+msgid "Design Layout"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:37
+#: includes/elementor/tour-packages.php:37
+#: includes/elementor/tour-search.php:40
+msgid "Select Layout"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:40
+#: includes/elementor/tour-packages.php:40
+#: includes/elementor/tour-search.php:43
+msgid "Layout 1"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:41
+#: includes/elementor/tour-packages.php:41
+#: includes/elementor/tour-search.php:44
+msgid "Layout 2"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:52
+#: includes/elementor/tour-packages.php:52
+msgid "Packages"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:60
+#: includes/elementor/tour-packages.php:60
+msgid "Number of Item"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:98
+msgid "Thumbnail image"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:100
+msgid "Placeholder image"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:113
+msgid "Discover Now"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:144
+msgid "Austria"
+msgstr ""
+
+#: includes/elementor/tour-destination.php:145
+msgid "2k reviews"
+msgstr ""
+
+#: includes/elementor/tour-packages.php:14
+msgid "Tour Packages"
+msgstr ""
+
+#: includes/elementor/tour-packages.php:116
+#: templates/tour-details.php:390
+msgid "Starting From"
+msgstr ""
+
+#: includes/elementor/tour-search.php:14
+msgid "Tour Search"
+msgstr ""
+
+#: includes/elementor/tour-search.php:59
+msgid "Form Text"
+msgstr ""
+
+#: includes/elementor/tour-search.php:66
+msgid "Form Title"
+msgstr ""
+
+#: includes/elementor/tour-search.php:68
+msgid "Title Here"
+msgstr ""
+
+#: includes/elementor/tour-search.php:69
+msgid "Type title"
+msgstr ""
+
+#: includes/elementor/tour-search.php:83
+msgid "General"
+msgstr ""
+
+#: includes/elementor/tour-search.php:90
+msgid "Alignment"
+msgstr ""
+
+#: includes/elementor/tour-search.php:94
+msgid "Left"
+msgstr ""
+
+#: includes/elementor/tour-search.php:95
+msgid "Center"
+msgstr ""
+
+#: includes/elementor/tour-search.php:96
+msgid "Right"
+msgstr ""
+
+#: includes/elementor/tour-search.php:103
+msgid "Width"
+msgstr ""
+
+#: includes/elementor/tour-search.php:128
+msgid "Title"
+msgstr ""
+
+#: includes/elementor/tour-search.php:135
+#: includes/elementor/tour-search.php:172
+msgid "Color"
+msgstr ""
+
+#: includes/elementor/tour-search.php:152
+#: includes/elementor/tour-search.php:189
+msgid "Margin"
+msgstr ""
+
+#: includes/elementor/tour-search.php:210
+msgid "Text Transform"
+msgstr ""
+
+#: includes/elementor/tour-search.php:214
+msgid "None"
+msgstr ""
+
+#: includes/elementor/tour-search.php:215
+msgid "UPPERCASE"
+msgstr ""
+
+#: includes/elementor/tour-search.php:216
+msgid "lowercase"
+msgstr ""
+
+#: includes/elementor/tour-search.php:217
+msgid "Capitalize"
+msgstr ""
+
+#: includes/elementor/tour-search.php:258
+#: includes/elementor/tour-search.php:359
+msgid "Where to"
+msgstr ""
+
+#: includes/elementor/tour-search.php:266
+msgid "Feb24  - Feb26"
+msgstr ""
+
+#: includes/elementor/tour-search.php:278
+#: includes/elementor/tour-search.php:382
+msgid "2"
+msgstr ""
+
+#: includes/elementor/tour-search.php:279
+#: includes/elementor/tour-search.php:383
+msgid "adult"
+msgstr ""
+
+#: includes/elementor/tour-search.php:282
+#: includes/elementor/tour-search.php:298
+#: includes/elementor/tour-search.php:309
+#: includes/elementor/tour-search.php:320
+#: includes/elementor/tour-search.php:386
+#: includes/elementor/tour-search.php:402
+#: includes/elementor/tour-search.php:413
+#: includes/elementor/tour-search.php:424
+msgid "0"
+msgstr ""
+
+#: includes/elementor/tour-search.php:283
+#: includes/elementor/tour-search.php:387
+msgid "childeren"
+msgstr ""
+
+#: includes/elementor/tour-search.php:286
+#: includes/elementor/tour-search.php:390
+msgid "1"
+msgstr ""
+
+#: includes/elementor/tour-search.php:287
+#: includes/elementor/tour-search.php:391
+msgid "infant"
+msgstr ""
+
+#: includes/elementor/tour-search.php:293
+#: includes/elementor/tour-search.php:397
+#: public/templates/tour-booking-form.php:202
+msgid "Adult"
+msgstr ""
+
+#: includes/elementor/tour-search.php:294
+#: includes/elementor/tour-search.php:398
+msgid "Over 12 Years"
+msgstr ""
+
+#: includes/elementor/tour-search.php:304
+#: includes/elementor/tour-search.php:408
+msgid "Childeren"
+msgstr ""
+
+#: includes/elementor/tour-search.php:305
+#: includes/elementor/tour-search.php:409
+msgid "Below 12 Years"
+msgstr ""
+
+#: includes/elementor/tour-search.php:315
+#: includes/elementor/tour-search.php:419
+#: templates/tour-details.php:221
+msgid "Infants"
+msgstr ""
+
+#: includes/elementor/tour-search.php:316
+#: includes/elementor/tour-search.php:420
+msgid "Below 3 Years"
+msgstr ""
+
+#: includes/elementor/tour-search.php:329
+#: includes/elementor/tour-search.php:434
+msgid "Search Now"
+msgstr ""
+
+#: includes/elementor/tour-search.php:369
+msgid "Feb24 - Feb26"
+msgstr ""
+
+#: includes/email-invoice.php:130
+msgid "House 1A, Gulshan 1, Dhaka 1212"
+msgstr ""
+
+#: includes/email-invoice.php:142
+msgid "Payment Mode:"
+msgstr ""
+
+#: includes/email-invoice.php:142
+msgid "Online"
+msgstr ""
+
+#: includes/email-invoice.php:192
+msgid "+88 09678 332211"
+msgstr ""
+
+#: nextdestina-booking.php:556
+msgid "Invalid dashboard page."
+msgstr ""
+
+#: nextdestina-booking.php:567
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: nextdestina-booking.php:664
+msgid "You can only rate after your travel start date, and only if you booked this tour."
+msgstr ""
+
+#: nextdestina-booking.php:752
+msgid "Dashboard template not found."
+msgstr ""
+
+#: nextdestina-booking.php:782
+#: templates/dashboard-master.php:224
+msgid "Page Not Found"
+msgstr ""
+
+#: nextdestina-booking.php:783
+#: templates/dashboard-master.php:225
+msgid "The requested dashboard page could not be found."
+msgstr ""
+
+#: nextdestina-booking.php:799
+#: nextdestina-booking.php:824
+msgid "Insufficient permissions."
+msgstr ""
+
+#: nextdestina-booking.php:836
+msgid "Invalid email address."
+msgstr ""
+
+#: nextdestina-booking.php:856
+msgid "Profile updated successfully."
+msgstr ""
+
+#: public/templates/tour-booking-form.php:28
+msgid "Invalid Tour ID"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:72
+msgid "Confirmation"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:101
+msgid "Step 1: Contact Info"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:116
+#: public/templates/tour-booking-form.php:205
+#: public/templates/tour-booking-form.php:229
+#: public/templates/tour-booking-form.php:253
+msgid "First Name*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:120
+#: public/templates/tour-booking-form.php:209
+#: public/templates/tour-booking-form.php:233
+#: public/templates/tour-booking-form.php:257
+msgid "Last Name*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:124
+msgid "Email*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:128
+msgid "Phone*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:132
+msgid "Address Line 1*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:136
+msgid "Address Line 2"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:140
+msgid "City*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:144
+msgid "State / Province / Region"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:148
+msgid "ZIP / Postal Code*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:152
+msgid "Country*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:160
+#: public/templates/tour-booking-form.php:269
+msgid "Next"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:168
+msgid "Your Contact Info"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:170
+#: public/templates/tour-booking-form.php:277
+msgid "Edit"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:174
+msgid "Name:"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:176
+msgid "Phone:"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:192
+msgid "Step 2: Traveler Information"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:213
+#: public/templates/tour-booking-form.php:237
+#: public/templates/tour-booking-form.php:261
+msgid "Date of Birth*"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:226
+msgid "Child"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:250
+msgid "Infant"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:276
+#: templates/pages/booking-details.php:125
+msgid "Traveler Information"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:283
+msgid "Step 3: Payment"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:364
+msgid "Please follow the instruction below"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:408
+msgid "Payment Summery"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:412
+#: public/templates/tour-booking-form.php:473
+#: templates/tour-details.php:390
+#, php-format
+msgid "$%s"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:416
+msgid "Charge"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:420
+msgid "Payable Amount"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:428
+msgid "Pay & Confirm Booking"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:437
+msgid "Booking Info"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:453
+msgid "Tour type"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:457
+msgid "Departure date"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:461
+msgid "Duration"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:465
+msgid "Number of Travellers"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:470
+msgid "Price Summary"
+msgstr ""
+
+#: public/templates/tour-booking-form.php:472
+msgid "Total Amount"
+msgstr ""
+
+#: templates/booking-cancel.php:11
+msgid "Booking Cancelled"
+msgstr ""
+
+#: templates/booking-cancel.php:12
+msgid "Your booking was not completed. If you believe this is an error, please try again or contact us for help."
+msgstr ""
+
+#: templates/booking-cancel.php:14
+msgid "Back to Home"
+msgstr ""
+
+#: templates/booking-success.php:90
+msgid "Thank you!"
+msgstr ""
+
+#: templates/booking-success.php:91
+msgid "Thanks a bunch for filling that out. It means a lot to us, just like you do! We really appreciate you giving us a moment of your time today. Thanks for being with us."
+msgstr ""
+
+#: templates/booking-success.php:122
+msgid "Stripe error:"
+msgstr ""
+
+#: templates/booking-success.php:125
+msgid "No session ID found."
+msgstr ""
+
+#: templates/dashboard-master.php:21
+#, php-format
+msgid "Dashboard - %s"
+msgstr ""
+
+#: templates/dashboard-master.php:53
+#: templates/pages/favorites.php:75
+msgid "Favourite List"
+msgstr ""
+
+#: templates/dashboard-master.php:57
+msgid "Payments"
+msgstr ""
+
+#: templates/dashboard-master.php:61
+msgid "Support"
+msgstr ""
+
+#: templates/dashboard-master.php:173
+msgid "My Profile"
+msgstr ""
+
+#: templates/dashboard-master.php:197
+msgid "Sign Out"
+msgstr ""
+
+#: templates/pages/booking-details.php:21
+msgid "Invalid booking ID."
+msgstr ""
+
+#: templates/pages/booking-details.php:29
+msgid "You are not allowed to view this booking."
+msgstr ""
+
+#: templates/pages/booking-details.php:72
+#: templates/pages/history.php:226
+msgid "Booking Details"
+msgstr ""
+
+#: templates/pages/booking-details.php:77
+msgid "Package Information"
+msgstr ""
+
+#: templates/pages/booking-details.php:107
+msgid "Schedule"
+msgstr ""
+
+#: templates/pages/booking-details.php:182
+msgid "Payment Information"
+msgstr ""
+
+#: templates/pages/booking-details.php:188
+msgid "Summary"
+msgstr ""
+
+#: templates/pages/create-ticket.php:23
+msgid "Submit Ticket"
+msgstr ""
+
+#: templates/pages/create-ticket.php:29
+msgid "You must be logged in to submit a ticket."
+msgstr ""
+
+#: templates/pages/favorites.php:89
+#: templates/pages/favorites.php:108
+msgid "SL No."
+msgstr ""
+
+#: templates/pages/favorites.php:91
+#: templates/pages/favorites.php:119
+msgid "Price"
+msgstr ""
+
+#: templates/pages/favorites.php:92
+#: templates/pages/favorites.php:122
+msgid "Added At"
+msgstr ""
+
+#: templates/pages/favorites.php:136
+msgid "You haven’t saved any favorites yet!"
+msgstr ""
+
+#: templates/pages/favorites.php:150
+msgid "Filter Favorites"
+msgstr ""
+
+#: templates/pages/favorites.php:156
+msgid "Package Name"
+msgstr ""
+
+#: templates/pages/favorites.php:160
+#: templates/pages/history.php:290
+#: templates/pages/payments.php:170
+msgid "Date From"
+msgstr ""
+
+#: templates/pages/favorites.php:164
+#: templates/pages/history.php:296
+#: templates/pages/payments.php:174
+msgid "Date To"
+msgstr ""
+
+#: templates/pages/favorites.php:167
+#: templates/pages/payments.php:178
+msgid "Apply Filter"
+msgstr ""
+
+#: templates/pages/favorites.php:171
+#: templates/pages/payments.php:182
+msgid "Reset Filter"
+msgstr ""
+
+#: templates/pages/history.php:145
+msgid "Tour History"
+msgstr ""
+
+#: templates/pages/history.php:160
+#: templates/pages/history.php:185
+#: templates/pages/history.php:284
+#: templates/pages/home.php:188
+#: templates/pages/home.php:212
+msgid "Destination"
+msgstr ""
+
+#: templates/pages/history.php:161
+#: templates/pages/history.php:188
+#: templates/pages/home.php:189
+#: templates/pages/home.php:215
+msgid "Paid Amount"
+msgstr ""
+
+#: templates/pages/history.php:162
+#: templates/pages/history.php:193
+#: templates/pages/home.php:190
+#: templates/pages/home.php:220
+msgid "Total Person"
+msgstr ""
+
+#: templates/pages/history.php:163
+#: templates/pages/history.php:196
+#: templates/pages/home.php:191
+#: templates/pages/home.php:223
+msgid "Tour Date"
+msgstr ""
+
+#: templates/pages/history.php:194
+#: templates/pages/home.php:221
+msgid "People"
+msgstr ""
+
+#: templates/pages/history.php:228
+#: templates/pages/history.php:272
+msgid "Close"
+msgstr ""
+
+#: templates/pages/history.php:232
+msgid "Package Name:"
+msgstr ""
+
+#: templates/pages/history.php:234
+msgid "Number of People:"
+msgstr ""
+
+#: templates/pages/history.php:235
+msgid "Total Price:"
+msgstr ""
+
+#: templates/pages/history.php:245
+msgid "Transaction ID:"
+msgstr ""
+
+#: templates/pages/history.php:246
+msgid "Status:"
+msgstr ""
+
+#: templates/pages/history.php:257
+#: templates/pages/home.php:252
+msgid "You have no bookings yet."
+msgstr ""
+
+#: templates/pages/history.php:271
+msgid "Filter Tour History"
+msgstr ""
+
+#: templates/pages/history.php:304
+msgid "All"
+msgstr ""
+
+#: templates/pages/history.php:306
+msgid "Completed"
+msgstr ""
+
+#: templates/pages/history.php:311
+msgid "Apply Filters"
+msgstr ""
+
+#: templates/pages/history.php:315
+msgid "Reset Filters"
+msgstr ""
+
+#: templates/pages/home.php:105
+msgid "Overview"
+msgstr ""
+
+#: templates/pages/home.php:117
+msgid "Total Booked Tour"
+msgstr ""
+
+#: templates/pages/home.php:128
+msgid "Total Transaction"
+msgstr ""
+
+#: templates/pages/home.php:139
+msgid "Total Support Ticket"
+msgstr ""
+
+#: templates/pages/home.php:150
+msgid "Total Paid Amount"
+msgstr ""
+
+#: templates/pages/home.php:166
+msgid "Recent Bookings"
+msgstr ""
+
+#: templates/pages/payments.php:76
+msgid "Payment History"
+msgstr ""
+
+#: templates/pages/payments.php:94
+#: templates/pages/payments.php:115
+msgid "Payment Status"
+msgstr ""
+
+#: templates/pages/payments.php:107
+msgid "method"
+msgstr ""
+
+#: templates/pages/payments.php:129
+msgid "No payment history found."
+msgstr ""
+
+#: templates/pages/payments.php:160
+msgid "Filter Payments"
+msgstr ""
+
+#: templates/pages/profile.php:32
+#: templates/pages/profile.php:38
+msgid "Profile Image"
+msgstr ""
+
+#: templates/pages/profile.php:49
+msgid "Profile updated successfully!"
+msgstr ""
+
+#: templates/pages/profile.php:53
+#: templates/pages/profile.php:59
+msgid "Profile"
+msgstr ""
+
+#: templates/pages/profile.php:64
+#: user/templates/page-login.php:49
+#: user/templates/page-registration.php:47
+msgid "Password"
+msgstr ""
+
+#: templates/pages/profile.php:76
+msgid "Profile Details"
+msgstr ""
+
+#: templates/pages/profile.php:87
+msgid "Upload New Photo"
+msgstr ""
+
+#: templates/pages/profile.php:92
+msgid "Reset"
+msgstr ""
+
+#: templates/pages/profile.php:95
+msgid "Allowed JPG, GIF or PNG. Max size of 800K"
+msgstr ""
+
+#: templates/pages/profile.php:104
+#: user/templates/page-registration.php:26
+#: user/templates/page-registration.php:27
+msgid "First Name"
+msgstr ""
+
+#: templates/pages/profile.php:108
+msgid "last name"
+msgstr ""
+
+#: templates/pages/profile.php:112
+msgid "e-mail"
+msgstr ""
+
+#: templates/pages/profile.php:116
+msgid "phone number"
+msgstr ""
+
+#: templates/pages/profile.php:121
+msgid "address"
+msgstr ""
+
+#: templates/pages/profile.php:125
+msgid "state"
+msgstr ""
+
+#: templates/pages/profile.php:129
+msgid "zip code"
+msgstr ""
+
+#: templates/pages/profile.php:133
+msgid "country"
+msgstr ""
+
+#: templates/pages/profile.php:135
+msgid "Select"
+msgstr ""
+
+#: templates/pages/profile.php:136
+msgid "Bangladesh"
+msgstr ""
+
+#: templates/pages/profile.php:137
+msgid "Australia"
+msgstr ""
+
+#: templates/pages/profile.php:138
+msgid "Belarus"
+msgstr ""
+
+#: templates/pages/profile.php:139
+msgid "Canada"
+msgstr ""
+
+#: templates/pages/profile.php:140
+msgid "China"
+msgstr ""
+
+#: templates/pages/profile.php:141
+msgid "France"
+msgstr ""
+
+#: templates/pages/profile.php:142
+msgid "Germany"
+msgstr ""
+
+#: templates/pages/profile.php:143
+msgid "India"
+msgstr ""
+
+#: templates/pages/profile.php:144
+msgid "Indonesia"
+msgstr ""
+
+#: templates/pages/profile.php:148
+msgid "language"
+msgstr ""
+
+#: templates/pages/profile.php:150
+msgid "Select Language"
+msgstr ""
+
+#: templates/pages/profile.php:151
+msgid "English"
+msgstr ""
+
+#: templates/pages/profile.php:152
+msgid "Spanish"
+msgstr ""
+
+#: templates/pages/profile.php:156
+msgid "Time zone"
+msgstr ""
+
+#: templates/pages/profile.php:158
+msgid "Select Timezone"
+msgstr ""
+
+#: templates/pages/profile.php:159
+msgid "(UTC ±00:00) Coordinated Universal Time"
+msgstr ""
+
+#: templates/pages/profile.php:160
+msgid "(UTC −05:00) New York, Toronto"
+msgstr ""
+
+#: templates/pages/profile.php:161
+msgid "(UTC −08:00) Los Angeles, Vancouver"
+msgstr ""
+
+#: templates/pages/profile.php:162
+msgid "(UTC +08:00) Beijing, Shanghai"
+msgstr ""
+
+#: templates/pages/profile.php:163
+msgid "(UTC +05:30) Delhi, Mumbai"
+msgstr ""
+
+#: templates/pages/profile.php:164
+msgid "(GMT-08:00) Tijuana, Baja California"
+msgstr ""
+
+#: templates/pages/profile.php:165
+msgid "(GMT-07:00) Arizona"
+msgstr ""
+
+#: templates/pages/profile.php:166
+msgid "(GMT-07:00) Chihuahua, La Paz, Mazatlan"
+msgstr ""
+
+#: templates/pages/profile.php:167
+msgid "(GMT-07:00) Mountain Time (US & Canada)"
+msgstr ""
+
+#: templates/pages/profile.php:168
+msgid "(GMT-06:00) Central America"
+msgstr ""
+
+#: templates/pages/profile.php:173
+msgid "save changes"
+msgstr ""
+
+#: templates/pages/profile.php:211
+msgid "Change Password"
+msgstr ""
+
+#: templates/pages/profile.php:216
+msgid "Old Password"
+msgstr ""
+
+#: templates/pages/profile.php:220
+#: user/templates/page-reset-password.php:63
+msgid "New Password"
+msgstr ""
+
+#: templates/pages/profile.php:224
+msgid "Confirm Password"
+msgstr ""
+
+#: templates/pages/profile.php:229
+msgid "Update Password"
+msgstr ""
+
+#: templates/pages/ticket-details.php:42
+#, php-format
+msgid "Ticket #%1$s [%2$s]"
+msgstr ""
+
+#: templates/pages/ticket-details.php:72
+#: user/class-nextdestina-user.php:654
+msgid "View Attachment"
+msgstr ""
+
+#: templates/pages/tickets.php:16
+msgid "My Support Tickets"
+msgstr ""
+
+#: templates/pages/tickets.php:28
+msgid "Serial"
+msgstr ""
+
+#: templates/pages/tickets.php:30
+#: templates/pages/tickets.php:49
+msgid "status"
+msgstr ""
+
+#: templates/pages/tickets.php:32
+msgid "Created At"
+msgstr ""
+
+#: templates/pages/tickets.php:42
+msgid "serial"
+msgstr ""
+
+#: templates/pages/tickets.php:45
+msgid "subject"
+msgstr ""
+
+#: templates/pages/tickets.php:65
+msgid "reply"
+msgstr ""
+
+#: templates/pages/tickets.php:79
+#: templates/pages/tickets.php:82
+msgid "No reply yet"
+msgstr ""
+
+#: templates/pages/tickets.php:87
+msgid "created-at"
+msgstr ""
+
+#: templates/pages/tickets.php:90
+msgid "action"
+msgstr ""
+
+#: templates/pages/tickets.php:101
+msgid "No tickets found."
+msgstr ""
+
+#: templates/tour-details.php:91
+#: templates/tour-details.php:184
+msgid "Price Includes"
+msgstr ""
+
+#: templates/tour-details.php:104
+msgid "Price Excludes"
+msgstr ""
+
+#: templates/tour-details.php:116
+#, php-format
+msgid "Max Travelers : %s"
+msgstr ""
+
+#: templates/tour-details.php:117
+#, php-format
+msgid "Min Travelers : %s"
+msgstr ""
+
+#: templates/tour-details.php:118
+#, php-format
+msgid "Package Type : %s"
+msgstr ""
+
+#: templates/tour-details.php:125
+msgid "Meeting And Pickup"
+msgstr ""
+
+#: templates/tour-details.php:129
+msgid "Start point"
+msgstr ""
+
+#: templates/tour-details.php:131
+#: templates/tour-details.php:144
+msgid "Open in Google Maps"
+msgstr ""
+
+#: templates/tour-details.php:136
+msgid "Start time"
+msgstr ""
+
+#: templates/tour-details.php:142
+msgid "End point"
+msgstr ""
+
+#: templates/tour-details.php:187
+msgid "Start From"
+msgstr ""
+
+#: templates/tour-details.php:189
+msgid "Booking Form"
+msgstr ""
+
+#: templates/tour-details.php:205
+msgid "Adults"
+msgstr ""
+
+#: templates/tour-details.php:213
+msgid "Children"
+msgstr ""
+
+#: templates/tour-details.php:231
+msgid "Proceed Booking"
+msgstr ""
+
+#: templates/tour-details.php:252
+msgid "Reviews"
+msgstr ""
+
+#: templates/tour-details.php:315
+msgid "Add your reviews"
+msgstr ""
+
+#: templates/tour-details.php:324
+msgid "Write your reviews"
+msgstr ""
+
+#: templates/tour-details.php:328
+msgid "Submit Rating"
+msgstr ""
+
+#: templates/tour-details.php:333
+msgid "Please log in as a traveler to submit your rating."
+msgstr ""
+
+#: templates/tour-details.php:363
+msgid "Related Tours"
+msgstr ""
+
+#: user/class-nextdestina-user.php:252
+msgid "Security check failed. Please try again."
+msgstr ""
+
+#: user/class-nextdestina-user.php:365
+msgid "Verify Your Email"
+msgstr ""
+
+#: user/class-nextdestina-user.php:366
+#, php-format
+msgid "Hello %s, please click the link below to verify your email: %s"
+msgstr ""
+
+#: user/class-nextdestina-user.php:409
+msgid "Please verify your email before logging in."
+msgstr ""
+
+#: user/templates/page-forgot-password.php:45
+msgid "Check your email for the reset link."
+msgstr ""
+
+#: user/templates/page-forgot-password.php:51
+msgid "Could not generate reset key."
+msgstr ""
+
+#: user/templates/page-forgot-password.php:58
+msgid "Only travelers can reset password here."
+msgstr ""
+
+#: user/templates/page-forgot-password.php:65
+msgid "The selected email is invalid."
+msgstr ""
+
+#: user/templates/page-forgot-password.php:77
+#: user/templates/page-reset-password.php:80
+msgid "Reset Password"
+msgstr ""
+
+#: user/templates/page-forgot-password.php:83
+msgid "Email Address"
+msgstr ""
+
+#: user/templates/page-forgot-password.php:84
+#: user/templates/page-login.php:45
+msgid "Enter your email..."
+msgstr ""
+
+#: user/templates/page-forgot-password.php:89
+msgid "Send Reset Link"
+msgstr ""
+
+#: user/templates/page-login.php:15
+msgid "Please check your email to verify your account."
+msgstr ""
+
+#: user/templates/page-login.php:23
+msgid "Your email is verified. You can now log in."
+msgstr ""
+
+#: user/templates/page-login.php:35
+msgid "Welcome back, Sign In"
+msgstr ""
+
+#: user/templates/page-login.php:36
+msgid "Sign in to your account and make booking faster and easier."
+msgstr ""
+
+#: user/templates/page-login.php:44
+msgid "Username or Email"
+msgstr ""
+
+#: user/templates/page-login.php:51
+#: user/templates/page-registration.php:49
+msgid "Password..."
+msgstr ""
+
+#: user/templates/page-login.php:59
+#: user/templates/page-registration.php:56
+msgid "Remember me"
+msgstr ""
+
+#: user/templates/page-login.php:63
+msgid "Forgot Password?"
+msgstr ""
+
+#: user/templates/page-login.php:70
+#: user/templates/page-registration.php:77
+msgid "Sign In"
+msgstr ""
+
+#: user/templates/page-login.php:78
+msgid "Login failed. Please check your credentials."
+msgstr ""
+
+#: user/templates/page-login.php:80
+msgid "Access denied. Only travelers can log in here."
+msgstr ""
+
+#: user/templates/page-registration.php:17
+msgid "Creative Account"
+msgstr ""
+
+#: user/templates/page-registration.php:18
+msgid "Discover the world’s best travel agency for making your adventure great with Explora."
+msgstr ""
+
+#: user/templates/page-registration.php:30
+#: user/templates/page-registration.php:31
+msgid "Last Name"
+msgstr ""
+
+#: user/templates/page-registration.php:35
+msgid "Username"
+msgstr ""
+
+#: user/templates/page-registration.php:36
+msgid "Enter Username"
+msgstr ""
+
+#: user/templates/page-registration.php:39
+msgid "Email"
+msgstr ""
+
+#: user/templates/page-registration.php:40
+msgid "Enter Email"
+msgstr ""
+
+#: user/templates/page-registration.php:43
+msgid "Phone"
+msgstr ""
+
+#: user/templates/page-registration.php:44
+msgid "Enter Phone Number"
+msgstr ""
+
+#: user/templates/page-registration.php:60
+msgid "Create Account"
+msgstr ""
+
+#: user/templates/page-registration.php:66
+msgid "Registration successful! Please log in."
+msgstr ""
+
+#: user/templates/page-registration.php:68
+msgid "Username or email already exists."
+msgstr ""
+
+#: user/templates/page-registration.php:70
+msgid "Registration failed. Try again."
+msgstr ""
+
+#: user/templates/page-registration.php:75
+msgid "OR"
+msgstr ""
+
+#: user/templates/page-registration.php:77
+msgid "Already have an account ?"
+msgstr ""
+
+#: user/templates/page-reset-password.php:20
+msgid "Invalid or expired reset link."
+msgstr ""
+
+#: user/templates/page-reset-password.php:30
+msgid "Passwords do not match."
+msgstr ""
+
+#: user/templates/page-reset-password.php:36
+msgid "Password must be at least 6 characters."
+msgstr ""
+
+#: user/templates/page-reset-password.php:43
+msgid "Password successfully reset."
+msgstr ""
+
+#: user/templates/page-reset-password.php:57
+msgid "Reset Your Password"
+msgstr ""
+
+#: user/templates/page-reset-password.php:65
+msgid "Enter password..."
+msgstr ""
+
+#: user/templates/page-reset-password.php:71
+msgid "Confirm New Password"
+msgstr ""
+
+#: user/templates/page-reset-password.php:73
+msgid "Enter Password..."
+msgstr ""
