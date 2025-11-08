@@ -2,7 +2,7 @@
 /**
 	* Plugin Name: Zupet Core
 	* Description: Zupet core plugin.
-	* Plugin URI:  https://themeforest.net/item/zupet-wallpapers-and-painting-services-wordpress-theme/54844757
+	* Plugin URI:  https://github.com/Bug-Finder-Ltd/wp_core/tree/zupet-core
 	* Version:     1.0.0
 	* Author:      bug-finder
 	* Author URI:  https://themeforest.net/user/bug-finder/portfolio
