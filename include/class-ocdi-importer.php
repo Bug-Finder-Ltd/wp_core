@@ -58,7 +58,7 @@ class Zupet_OCDI_Demo_Importer {
     }
 
     public function ocdi_after_import_setup( $selected_file ) {
-
+        
         $this->assign_menu_to_location();
         $this->assign_frontpage_id( $selected_file );
         $this->update_permalinks();

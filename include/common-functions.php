@@ -530,3 +530,291 @@ function eduker_header_search_url() {
         return esc_url( home_url( '/courses' ) );
     }
 }
+
+/**
+ * Return or echo share buttons HTML.
+ * @author            bug-finder
+ * atikulislam92@mail.com
+ */
+ 
+function zupet_get_share_buttons( $args = array() ) {
+    $defaults = array(
+        'networks' => array( 'facebook', 'twitter', 'linkedin' ),
+        'url'      => get_permalink(),
+        'title'    => get_the_title(),
+        'echo'     => true,
+        'class'    => 'zupet-blog-share',
+    );
+
+    $r = wp_parse_args( $args, $defaults );
+
+    // Allow other plugins/themes to filter networks.
+    $r['networks'] = (array) apply_filters( 'zupet_share_networks', $r['networks'] );
+
+    $url   = rawurlencode( $r['url'] );
+    $title = rawurlencode( $r['title'] );
+
+    $items = array();
+
+    foreach ( $r['networks'] as $network ) {
+        $share_url = '';
+        $icon = '';
+
+        switch ( strtolower( $network ) ) {
+            case 'facebook':
+                $share_url = "https://www.facebook.com/sharer/sharer.php?u={$url}";
+                $icon = 'fab fa-facebook-f';
+                break;
+
+            case 'twitter':
+                $share_url = "https://twitter.com/intent/tweet?text={$title}&url={$url}";
+                $icon = 'fab fa-twitter';
+                break;
+
+            case 'linkedin':
+                $share_url = "https://www.linkedin.com/shareArticle?mini=true&url={$url}&title={$title}";
+                $icon = 'fab fa-linkedin-in';
+                break;
+
+            case 'pinterest':
+                $share_url = "https://pinterest.com/pin/create/button/?url={$url}&description={$title}";
+                $icon = 'fab fa-pinterest-p';
+                break;
+
+            case 'whatsapp':
+                $share_url = "https://api.whatsapp.com/send?text={$title}%20{$url}";
+                $icon = 'fab fa-whatsapp';
+                break;
+
+            default:
+                /**
+                 * Allow custom networks to be handled by other code.
+                 * If a filter returns an array with 'url' and 'icon', use it.
+                 */
+                $custom = apply_filters( 'zupet_share_custom_network', null, $network, $r );
+                if ( is_array( $custom ) && ! empty( $custom['url'] ) ) {
+                    $share_url = $custom['url'];
+                    $icon = isset( $custom['icon'] ) ? $custom['icon'] : '';
+                }
+                break;
+        }
+
+        if ( $share_url ) {
+            $aria_label = sprintf( __( 'Share on %s', 'zupetcore' ), ucfirst( $network ) );
+
+            $items[] = sprintf(
+                '<li><a href="%1$s" target="_blank" rel="nofollow noopener noreferrer" aria-label="%2$s">%3$s</a></li>',
+                esc_url( $share_url ),
+                esc_attr( $aria_label ),
+                '<i class="' . esc_attr( $icon ) . '"></i>'
+            );
+        }
+    }
+
+    if ( empty( $items ) ) {
+        if ( $r['echo'] ) {
+            return;
+        }
+        return '';
+    }
+
+    $label = esc_html__( 'Share this post:', 'zupetcore' );
+
+    $output  = '<div class="' . esc_attr( $r['class'] ) . '">';
+    $output .= '<p>' . $label . '</p>';
+    $output .= '<ul class="social-icons">' . implode( '', $items ) . '</ul>';
+    $output .= '</div>';
+
+    if ( $r['echo'] ) {
+        echo $output;
+        return null;
+    }
+
+    return $output;
+}
+ 
+/**
+ * Return Woocommerce share buttons HTML.
+ * @author            bug-finder
+ * atikulislam92@mail.com
+ */
+
+if ( ! function_exists( 'zupet_product_share_icons' ) ) {
+
+    function zupet_product_share_icons( $post_id = null ) {
+
+        $post_id = $post_id ? $post_id : get_the_ID();
+
+        $url   = urlencode( get_permalink( $post_id ) );
+        $title = urlencode( get_the_title( $post_id ) );
+        $image = wp_get_attachment_url( get_post_thumbnail_id( $post_id ) );
+
+        ob_start();
+        ?>
+        <ul class="zupet-share-icons">
+            <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/intent/tweet?url=<?php echo esc_url( $url ); ?>&text=<?php echo esc_html( $title ); ?>" target="_blank" rel="noopener">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://pinterest.com/pin/create/button/?url=<?php echo esc_url( $url ); ?>&media=<?php echo esc_url( $image ); ?>&description=<?php echo esc_html( $title ); ?>" target="_blank" rel="noopener">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo esc_url( $url ); ?>&title=<?php echo esc_html( $title ); ?>" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/" target="_blank" rel="noopener">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+        <?php
+
+        return ob_get_clean();
+    }
+}
+
+/*--------------
+ Product Filter
+----------------*/
+
+function zupet_filter_products() {
+
+    check_ajax_referer( 'zupet_filter_products_nonce', 'security' );
+
+    $paged = !empty($_POST['paged']) ? intval($_POST['paged']) : 1;
+    $categories = ! empty( $_POST['categories'] ) ? array_map( 'intval', (array) $_POST['categories'] ) : [];
+    $min_price  = isset( $_POST['min_price'] ) ? floatval( $_POST['min_price'] ) : '';
+    $max_price  = isset( $_POST['max_price'] ) ? floatval( $_POST['max_price'] ) : '';
+
+    $args = [
+        'post_type'      => 'product',
+        'posts_per_page' => 6,
+        'paged'          => $paged,
+        'post_status'    => 'publish',
+    ];
+
+    // Category filter
+    if ( ! empty( $categories ) ) {
+        $args['tax_query'] = [
+            [
+                'taxonomy' => 'product_cat',
+                'field'    => 'term_id',
+                'terms'    => $categories,
+            ]
+        ];
+    }
+
+    // Price filter
+    if ( ! empty( $min_price ) || ! empty( $max_price ) ) {
+
+        $meta_query = ['relation' => 'AND'];
+
+        if ( ! empty( $min_price ) ) {
+            $meta_query[] = [
+                'key'     => '_price',
+                'value'   => $min_price,
+                'compare' => '>=',
+                'type'    => 'NUMERIC',
+            ];
+        }
+        if ( ! empty( $max_price ) ) {
+            $meta_query[] = [
+                'key'     => '_price',
+                'value'   => $max_price,
+                'compare' => '<=',
+                'type'    => 'NUMERIC',
+            ];
+        }
+        $args['meta_query'] = $meta_query;
+    }
+
+    $query = new WP_Query($args);
+
+    if ( $query->have_posts() ) {
+        ob_start();
+        
+        echo '<div class="products-grid">';
+        while ( $query->have_posts() ) {
+            $query->the_post();
+            wc_get_template_part( 'content', 'product' );
+        }
+        echo '</div>';
+
+        // Custom AJAX pagination
+        echo '<div class="products-pagination ajax-pagination">';
+        for ( $i = 1; $i <= $query->max_num_pages; $i++ ) {
+            echo '<a href="#" data-page="'. $i .'">'. $i .'</a> ';
+        }
+        echo '</div>';
+
+        wp_reset_postdata();
+        echo ob_get_clean();
+    } else {
+        echo '<p>No products found.</p>';
+    }
+
+    wp_die();
+}
+add_action('wp_ajax_filter_products', 'zupet_filter_products');
+add_action('wp_ajax_nopriv_filter_products', 'zupet_filter_products');
+
+/*-------------
+ Price Slider
+---------------*/
+
+if ( ! function_exists( 'wc_get_min_max_price' ) ) {
+    function wc_get_min_max_price() {
+        global $wpdb;
+
+        $minimum_price = $wpdb->get_var("SELECT MIN(CAST(meta_value AS DECIMAL(10,2))) 
+                                     FROM {$wpdb->postmeta} 
+                                     WHERE meta_key = '_price' 
+                                     AND meta_value != ''");
+
+        $maximum_price = $wpdb->get_var("SELECT MAX(CAST(meta_value AS DECIMAL(10,2))) 
+                                     FROM {$wpdb->postmeta} 
+                                     WHERE meta_key = '_price' 
+                                     AND meta_value != ''");
+
+        return [
+            'min' => floor($minimum_price),
+            'max' => ceil($maximum_price),
+        ];
+    }
+}
+
+/*-------------
+ Wishlist
+---------------*/
+
+if ( ! function_exists( 'zupet_core_is_in_wishlist' ) ) {
+    function zupet_core_is_in_wishlist( $product_id ) {
+        $user_id = get_current_user_id();
+        $wishlist = [];
+
+        if ( $user_id ) {
+            $wishlist = get_user_meta( $user_id, '_wishlist_products', true );
+        } elseif ( isset( $_COOKIE['nd_wishlist'] ) ) {
+            $wishlist = json_decode( stripslashes( $_COOKIE['nd_wishlist'] ), true );
+        }
+
+        $wishlist = is_array( $wishlist ) ? $wishlist : [];
+        return in_array( $product_id, $wishlist, true );
+    }
+}

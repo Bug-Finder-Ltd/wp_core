@@ -135,3 +135,5 @@ function zupet_wishlist_content() {
     echo do_shortcode( '[zupet_wishlist]' );
 }
 add_action( 'woocommerce_account_wishlist_endpoint', 'zupet_wishlist_content' );
+
+

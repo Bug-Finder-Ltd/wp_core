@@ -357,16 +357,16 @@ document.addEventListener("DOMContentLoaded", function(event){
             scrollTrigger: {
                 trigger: ".cta-container", 
                 start: "top center",
-                end: "bottom center",
-                scrub: 1
+                end: "bottom top",
+                scrub: 1,
             }
         });
-
+        
         tl2.fromTo(".cta-container .content",
             { scale: 0, transformOrigin: "center center" },
             { scale: 1, duration: 1, ease: "power3.out" }
         );
-
+        
         gsap.utils.toArray(".cta-image-box img").forEach(img=>{
             tl2.from(img, {
                 top: "50%", 
