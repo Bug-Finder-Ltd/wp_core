@@ -1,0 +1,78 @@
+
+
+.metabox-grid.column-4{
+	display: flex;
+	gap: 30px;
+	border: 1px solid rgba(231, 234, 243, 0.7);
+	border-radius: 10px;
+	box-shadow: 0 .375rem .75rem rgba(140, 152, 164, .075);
+	padding: 20px;
+}
+.metabox-grid.column-4 .metabox-column{
+	width: 25%;
+}
+
+.field-title{
+	font-weight: 600;
+	margin: 0 0 15px;
+}
+.toggle-switch{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.toggle-switch .raizen-switch {
+	position: relative;
+	display: inline-block;
+	width: 46px;
+	height: 24px;
+}
+.toggle-switch .raizen-switch input {
+	display:none;
+}
+.toggle-switch .raizen-switch .raizen-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 24px;
+}
+.toggle-switch .raizen-switch .raizen-slider:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+}
+.toggle-switch .raizen-switch input:checked + .raizen-slider {
+	background-color: #007cba;
+}
+.toggle-switch .raizen-switch input:checked + .raizen-slider:before {
+	transform: translateX(22px);
+}
+.toggle-switch .switch-label{
+	color: #777;
+	font-size: 13px;
+}
+
+/*=================
+ Social Icon Field
+===================*/
+
+.metabox-column input[type="text"],
+.metabox-column input[type="url"]{
+	width: 100%;
+}
+#social-icons-wrapper .social-row{
+	margin-bottom: 10px;
+	display: flex;
+	gap: 10px;
+}
+#social-icons-wrapper .social-row input{
+	width: 45%;
+}
