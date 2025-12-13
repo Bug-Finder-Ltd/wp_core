@@ -202,6 +202,7 @@
     transform: rotate(45deg);
     height: 170px;
     width: 170px;
+    z-index: 2;
 }
 .banner-area.style-two .exp-box .inner-box{
     background-color: #0A0909;
@@ -334,6 +335,13 @@
     width: 100px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 1750px) {
+    
+    .banner-area.style-two .exp-box{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1399px) {
@@ -1343,8 +1351,6 @@
 /* Style Three */
 
 .heading-text.style-three .heading{
-    text-decoration: underline wavy var(--text-color-3);
-    text-decoration-thickness: 1px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1459,6 +1465,12 @@
 .section-title.style-one.right{
     text-align: right;
     margin: 0 0 0 auto;
+}
+@media only screen and (max-width: 1399px){
+    
+    .section-title.style-one h2 {
+        font-size: 70px;
+    }
 }
 @media only screen and (max-width: 1199px){
 
@@ -4293,6 +4305,31 @@
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 16px;
+}
+
+@media only screen and (max-width: 1599px) {
+    
+    .service-list.style-one{
+        gap: 80px;
+    }
+    .service-list.style-one .lists .item{
+        padding: 40px 0 40px 40px;
+    }
+    .service-list.style-one .lists .item a{
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 1299px) {
+    
+    .service-list.style-one .lists .item a{
+        flex-wrap: wrap;
+    }
+    .service-list.style-one .lists .item .service-list-icon{
+        width: 100%;
+        justify-content: start;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -4306,6 +4343,10 @@
         height: 400px;
         width: 100%;
     }
+    .service-list.style-one .image-box img{
+        width: 100%;
+        object-fit: cover
+    }
     .service-list.style-one .wrapper{
         width: 100%;
     }
@@ -4315,6 +4356,9 @@
     .service-list.style-one .lists .item a{
         font-size: 24px;
         flex-wrap: wrap;
+    }
+    .service-list.style-one .lists .item .service-list-icon{
+        width: auto;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -5652,6 +5696,12 @@
     }
     .testimonial.style-one .testi-left{
         width: 100%;
+    }
+    .testimonial.style-one .client-image::before{
+        display: none;
+    }
+    .testimonial.style-one .client-image::after{
+        display: none;
     }
     .testimonial.style-one .testi-left .quote-icon{
         margin: 30px 0 15px;

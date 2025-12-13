@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function(event){
     =================*/
 
     ScrollSmoother.create({
+        wrapper: '#smooth-wrapper',
+        content: '#smooth-content',
         smooth: 1.2,
         effects: true,
     });

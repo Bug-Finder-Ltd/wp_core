@@ -228,30 +228,32 @@
 	/*
 	 * Team
 	*/
-
-	$(".frame .item").on("click", function () {
-
-		let angle = $(this).data("angle");
-		let index = $(this).attr("class").split(" ")[1];
-
-		// Rotate the circle frame
-		$(".frame").css("transform", "rotate(" + angle + "deg)");
-
-		// Counter rotate images wrapper so the image stays upright
-		$(".rotator").css("transform", "rotate(" + (-angle) + "deg)");
-
-		// Active highlight
-		$(".item").removeClass("active");
-		$(this).addClass("active");
-
-		// Show title
-		$(".title").removeClass("active");
-		$("." + index + "-title").addClass("active");
-
-	});
-
-	// default load
-	$(".item1").click();
+    
+    if ($(window).width() > 767) {
+        $(".frame .item").on("click", function () {
+            
+            let angle = $(this).data("angle");
+            let index = $(this).attr("class").split(" ")[1];
+            
+            // Rotate the circle frame
+            $(".frame").css("transform", "rotate(" + angle + "deg)");
+            
+            // Counter rotate images wrapper so the image stays upright
+            $(".rotator").css("transform", "rotate(" + (-angle) + "deg)");
+            
+            // Active highlight
+            $(".item").removeClass("active");
+            $(this).addClass("active");
+            
+            // Show title
+            $(".title").removeClass("active");
+            $("." + index + "-title").addClass("active");
+            
+        });
+        
+        // default load
+        $(".item1").click();
+    }
 
 
 
