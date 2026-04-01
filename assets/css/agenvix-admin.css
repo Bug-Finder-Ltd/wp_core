@@ -1,0 +1,77 @@
+
+
+.metabox-grid.column-4{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	padding: 20px;
+}
+.metabox-grid.column-4 .metabox-column{
+	width: calc(25% - 23px);
+}
+
+.field-title{
+	display: block;
+	font-weight: 600;
+	margin: 0 0 15px;
+}
+.toggle-switch{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.toggle-switch .provix-switch {
+	position: relative;
+	display: inline-block;
+	width: 46px;
+	height: 24px;
+}
+.toggle-switch .provix-switch input {
+	display:none;
+}
+.toggle-switch .provix-switch .provix-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 24px;
+}
+.toggle-switch .provix-switch .provix-slider:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+}
+.toggle-switch .provix-switch input:checked + .provix-slider {
+	background-color: #007cba;
+}
+.toggle-switch .provix-switch input:checked + .provix-slider:before {
+	transform: translateX(22px);
+}
+.toggle-switch .switch-label{
+	color: #777;
+	font-size: 13px;
+}
+
+.metabox-column select{
+	width: 100%;
+	border: 1px solid rgba(231, 234, 243, 1);
+	padding: 6px 10px;
+}
+.metabox-column input[type="text"],
+.metabox-column input[type="url"]{
+	width: 100%;
+	border: 1px solid rgba(231, 234, 243, 1);
+	padding: 6px 10px;
+}
+
+#custom-page-logo-preview{
+	max-width:100%;
+	margin-bottom:10px;
+}
