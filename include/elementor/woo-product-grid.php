@@ -75,31 +75,7 @@ class Protine_Product_Grid extends \Elementor\Widget_Base {
 				'default' => 4,
 			]
 		);
-		$this->add_control(
-			'view_all_btn_text',
-			[
-				'label' => esc_html__( 'Button text', 'protinecore' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'View All', 'protinecore' ),
-				'placeholder' => esc_html__( 'Type your text here', 'protinecore' ),
-				'label_block' => true,
-			]
-		);
-		$this->add_control(
-			'view_all_btn_link',
-			[
-				'label' => esc_html__( 'Button Link', 'protinecore' ),
-				'type' => \Elementor\Controls_Manager::URL,
-				'options' => [ 'url', 'is_external', 'nofollow' ],
-				'default' => [
-					'url' => '#',
-					'is_external' => true,
-					'nofollow' => true,
-					// 'custom_attributes' => '',
-				],
-				'label_block' => true,
-			]
-		);
+
 		$this->end_controls_section();
 
 		/**
@@ -220,11 +196,7 @@ class Protine_Product_Grid extends \Elementor\Widget_Base {
 									</div>
 								</div>
 								<div class="bottom">
-									<h3 class="product-title">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php echo get_the_title(); ?>
-                                        </a>
-									</h3>
+									<h3 class="product-title"><?php echo get_the_title(); ?></h3>
 									<div class="product-excerpt">
 										<?php echo wp_trim_words( get_the_excerpt(), 8 ); ?>
 									</div>
@@ -289,12 +261,9 @@ class Protine_Product_Grid extends \Elementor\Widget_Base {
 							endwhile;
 							?>
 							<div class="view-all">
-								<a href="<?php echo esc_url($settings['view_all_btn_link']['url']); ?>">
-									<?php echo esc_html($settings['view_all_btn_text']); ?>
-									<div class="btn-icon">
-                                        <span class="icon-first"><i class="pi-medicine"></i></span>
-                                        <span class="icon-second"><i class="pi-medicine"></i></span>
-                                    </div>
+								<a href="<?php wc_get_page_permalink('shop'); ?>">
+									<?php echo esc_html_e('See Full Collection', 'protinecore'); ?>
+									<i class="pi-medicine"></i>
 								</a>
 							</div>
 						</div>

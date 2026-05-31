@@ -127,39 +127,16 @@
 .banner-area.style-one .banner-bottom .button:hover{
     background-color: var(--main-color);
 }
-.banner-area.style-one .banner-bottom .button .btn-icon{
-    position: relative;
-    display: inline-flex;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease-out 0s;
-    overflow: hidden;
+.banner-area.style-one .banner-bottom .button i {
+    display: inline-block;
     height: 32px;
     width: 32px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
     background-color: #fff;
-}
-.banner-area.style-one .banner-bottom .button .btn-icon .icon-first {
-    color: var(--text-color-1);
-  transition: all 0.3s ease-out 0s;
-}
-.banner-area.style-one .banner-bottom .button .btn-icon .icon-second {
-  position: absolute;
-  transform: translateX(-200%);
-  transition: all 0.3s ease-out 0s;
-  color: var(--main-color);
-}
-.banner-area.style-one .banner-bottom .button:hover .icon-first {
-  transform: translateX(200%);
-}
-.banner-area.style-one .banner-bottom .button:hover .icon-second {
-  transform: translateX(0%);
-}
-.banner-area.style-one .banner-bottom .button i{
-  display: inline-block;
-  font-size: 18px;
-  transform: rotate(45deg);
+    color: #0A0A0A;
+    font-size: 18px;
+    border-radius: 50%;
 }
 
 @media only screen and (max-width: 1679px) {
@@ -314,15 +291,13 @@
     background-color: #ECEDEC;
 }
 .banner-area.style-two .banner-left{
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 25.5%;
-    z-index: 2;
 }
 .banner-area.style-two .video-wrapper{
-    position: relative;
+    /*position: absolute;*/
     width: 398px;
     z-index: 99;
 }
@@ -485,42 +460,16 @@
     background-color: #0A0A0A;
     border-radius: 50px;
 }
-.banner-area.style-two .banner-bottom .button:hover{
-    background-color: var(--main-color);
-}
-.banner-area.style-two .banner-bottom .button .btn-icon{
-    position: relative;
-    display: inline-flex;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease-out 0s;
-    overflow: hidden;
+.banner-area.style-two .banner-bottom .button i {
+    display: inline-block;
     height: 32px;
     width: 32px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
     background-color: #fff;
-}
-.banner-area.style-two .banner-bottom .button .btn-icon .icon-first {
-    color: var(--text-color-1);
-    transition: all 0.3s ease-out 0s;
-}
-.banner-area.style-two .banner-bottom .button .btn-icon .icon-second {
-    position: absolute;
-    transform: translateX(-200%);
-    transition: all 0.3s ease-out 0s;
-    color: var(--main-color);
-}
-.banner-area.style-two .banner-bottom .button:hover .icon-first {
-    transform: translateX(200%);
-}
-.banner-area.style-two .banner-bottom .button:hover .icon-second {
-    transform: translateX(0%);
-}
-.banner-area.style-two .banner-bottom .button i{
-    display: inline-block;
+    color: #0A0A0A;
     font-size: 18px;
-    transform: rotate(45deg);
+    border-radius: 50%;
 }
 .banner-area.style-two .banner-bottom .bottom-wrap{
     display: flex;
@@ -563,15 +512,12 @@
     margin-right: 12px;
 }
 .banner-area.style-two .animation-area{
-    position: relative;
-    margin-top: -250px;
-    z-index: 3;
+    margin-top: -200px;
 }
 .banner-area.style-two{
     margin-bottom: 260px;
 }
 .banner-area.style-two .animated-text{
-    position: relative;
     border-radius: 16px;
     background-color: rgba(255, 255, 255, 0.6);
     max-width: 1275px;
@@ -1039,18 +985,6 @@
     color: var(--main-color);
     font-size: 20px;
     margin-right: 7px;
-}
-
-@media only screen and (max-width: 767px){
-    
-    .section-subtitle.style-two .subtitle{
-        font-size: 15px;
-        line-height: 1.5;
-        padding: 8px 18px;
-    }
-    .section-subtitle.style-two .subtitle i{
-        display: none;
-    }
 }
 
 /* ------------------------
@@ -1850,39 +1784,16 @@
 .single-btn.style-one .button:hover{
     background-color: var(--main-color);
 }
-.single-btn.style-one .button .btn-icon{
-    position: relative;
-    display: inline-flex;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease-out 0s;
-    overflow: hidden;
+.single-btn.style-one .button i{
+    display: inline-block;
     height: 32px;
     width: 32px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
     background-color: #fff;
-}
-.single-btn.style-one .button .btn-icon .icon-first {
     color: var(--text-color-1);
-    transition: all 0.3s ease-out 0s;
-}
-.single-btn.style-one .button .btn-icon .icon-second {
-    position: absolute;
-    transform: translateX(-200%);
-    transition: all 0.3s ease-out 0s;
-    color: var(--main-color);
-}
-.single-btn.style-one .button:hover .icon-first {
-  transform: translateX(200%);
-}
-.single-btn.style-one .button:hover .icon-second {
-  transform: translateX(0%);
-}
-.single-btn.style-one .button i{
-  display: inline-block;
-  font-size: 18px;
-  transform: rotate(45deg);
+    font-size: 18px;
+    border-radius: 50%;
 }
 
 @media only screen and (max-width: 767px){
@@ -1910,39 +1821,16 @@
 .single-btn.style-two .button:hover{
     background-color: var(--text-color-1);
 }
-.single-btn.style-two .button .btn-icon{
-    position: relative;
-    display: inline-flex;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease-out 0s;
-    overflow: hidden;
+.single-btn.style-two .button i{
+    display: inline-block;
     height: 32px;
     width: 32px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
     background-color: #fff;
-}
-.single-btn.style-two .button .btn-icon .icon-first {
     color: var(--main-color);
-  transition: all 0.3s ease-out 0s;
-}
-.single-btn.style-two .button .btn-icon .icon-second {
-  position: absolute;
-  transform: translateX(-200%);
-  transition: all 0.3s ease-out 0s;
-  color: var(--text-color-1);
-}
-.single-btn.style-two .button:hover .icon-first {
-  transform: translateX(200%);
-}
-.single-btn.style-two .button:hover .icon-second {
-  transform: translateX(0%);
-}
-.single-btn.style-two .button i{
-  display: inline-block;
-  font-size: 18px;
-  transform: rotate(45deg);
+    font-size: 18px;
+    border-radius: 50%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2134,40 +2022,17 @@
 .features-list.style-one .view-all a:hover{
     background-color: var(--main-color);
 }
-.features-list.style-one .view-all a .btn-icon{
-    position: relative;
-    display: inline-flex;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease-out 0s;
-    overflow: hidden;
+.features-list.style-one .view-all a i {
+    display: inline-block;
     height: 32px;
     width: 32px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
     background-color: #fff;
-    margin-left: 5px;
-}
-.features-list.style-one .view-all a .btn-icon .icon-first {
-    color: var(--text-color-1);
-    transition: all 0.3s ease-out 0s;
-}
-.features-list.style-one .view-all a .btn-icon .icon-second {
-    position: absolute;
-    transform: translateX(-200%);
-    transition: all 0.3s ease-out 0s;
-    color: var(--main-color);
-}
-.features-list.style-one .view-all a:hover .icon-first {
-  transform: translateX(200%);
-}
-.features-list.style-one .view-all a:hover .icon-second {
-  transform: translateX(0%);
-}
-.features-list.style-one .view-all a i{
-    display: inline-block;
+    color: #0A0A0A;
     font-size: 18px;
-    transform: rotate(45deg);
+    border-radius: 50%;
+    margin-left: 10px;
 }
 .features-list.style-one .stack-item{
     position: absolute;
@@ -3446,7 +3311,6 @@
     padding: 32px 32px;
     border-radius: 16px;
     max-width: 332px;
-    margin: auto;
 }
 .lists.style-3 li{
     display: inline-flex;
@@ -4409,15 +4273,6 @@ Responsive
     background-color: #f7f7f7;
     border-radius: 50%;
 }
-.protine-product-grid.style-one .product-item .content .top .details-btn a:hover{
-    background-color: var(--main-color);
-}
-.protine-product-grid.style-one .product-item .content .top .details-btn a svg path{
-    transition: 0.3s;
-}
-.protine-product-grid.style-one .product-item .content .top .details-btn a:hover svg path{
-    fill: #fff;
-}
 .protine-product-grid.style-one .product-item .content .bottom .product-title{
     color: var(--text-color-1);
     font-size: 24px;
@@ -4425,12 +4280,6 @@ Responsive
     font-weight: 400;
     line-height: 1.8;
     margin-bottom: 8px;
-}
-.protine-product-grid.style-one .product-item .content .bottom .product-title a{
-    color: var(--text-color-1);
-}
-.protine-product-grid.style-one .product-item .content .bottom .product-title a:hover{
-    color: var(--main-color);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -4518,43 +4367,17 @@ Responsive
     color: #fff;
     background-color: var(--main-color);
 }
-.protine-product-grid.style-two .view-all a .btn-icon{
-    position: relative;
-    display: inline-flex;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease-out 0s;
-    overflow: hidden;
+.protine-product-grid.style-two .view-all a i{
+    display: inline-block;
     height: 36px;
     width: 36px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
     background-color: var(--text-color-1);
-    margin-left: 5px;
-}
-.protine-product-grid.style-two .view-all a:hover .btn-icon{
-    background-color: #fff;
-}
-.protine-product-grid.style-two .view-all a .btn-icon .icon-first {
     color: #fff;
-    transition: all 0.3s ease-out 0s;
-}
-.protine-product-grid.style-two .view-all a .btn-icon .icon-second {
-  position: absolute;
-  transform: translateX(-200%);
-  transition: all 0.3s ease-out 0s;
-  color: var(--main-color);
-}
-.protine-product-grid.style-two .view-all a:hover .icon-first {
-  transform: translateX(200%);
-}
-.protine-product-grid.style-two .view-all a:hover .icon-second {
-  transform: translateX(0%);
-}
-.protine-product-grid.style-two .view-all a i{
-  display: inline-block;
-  font-size: 18px;
-  transform: rotate(45deg);
+    font-size: 18px;
+    border-radius: 50%;
+    margin-left: 5px;
 }
 
 @media only screen and (max-width: 1024px) {

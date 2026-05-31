@@ -2,10 +2,10 @@
 /**
 	* Plugin Name: Protine Core
 	* Description: Protine core plugin.
-	* Plugin URI:  https://themeforest.net/item/protine-wallpapers-and-painting-services-wordpress-theme/54844757
+	* Plugin URI:  https://bugfinder.net/protine-core
 	* Version:     1.0.0
 	* Author:      bug-finder
-	* Author URI:  https://themeforest.net/user/bug-finder/portfolio
+	* Author URI:  https://bugfinder.net
 	* Text Domain: protinecore
 	* Elementor tested up to: 3.21.1
 	* Elementor Pro tested up to: 3.21.0

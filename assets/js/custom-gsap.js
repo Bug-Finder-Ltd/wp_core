@@ -11,12 +11,10 @@ document.addEventListener("DOMContentLoaded", function(event){
     /*===============
      Scroll Smoother
     =================*/
-    
-    mm.add("(min-width: 1025px)", () => {
-        ScrollSmoother.create({
-            smooth: 2,
-            effects: true,
-        });
+
+    ScrollSmoother.create({
+        smooth: 1.2,
+        effects: true,
     });
 
     /*======================
@@ -125,25 +123,25 @@ document.addEventListener("DOMContentLoaded", function(event){
     const hero_2 = document.querySelector(".banner-area.style-two");
 
     if (hero_2) {
-        
+
         mm.add("(min-width: 1025px)", () => {
-            
+
             mm.add("(max-width: 1398px)", () => {
-                
+
                 const videoWrapper = document.querySelector(".video-wrapper");
                 
                 gsap.set(videoWrapper, {
                   left: 0,
                 });
-                
+
                 const mainContainer = document.querySelector(".banner-wrap");
-                
+
                 const containerWidth = mainContainer.offsetWidth;
-                
+
                 const videoWidth = 960;
-                
+
                 const leftSpace = (( containerWidth - videoWidth ) / 2);
-                
+
                 gsap.to(".video-wrapper", {
                     scrollTrigger: {
                         trigger: ".banner-area.style-two .video-wrapper",
@@ -227,8 +225,6 @@ document.addEventListener("DOMContentLoaded", function(event){
                     scrub: true,
                     pin: true,
                     pinSpacing: true,
-                    invalidateOnRefresh: true,
-                    anticipatePin: 1,
                 },
                 opacity: 1,
                 duration: 0.5,
@@ -261,11 +257,9 @@ document.addEventListener("DOMContentLoaded", function(event){
               ".banner-area.style-two .animation-area",
               {
                 opacity: 0,
-                visibility: "hidden",
               },
               {
                 opacity: 1,
-                visibility: "visible",
                 duration: 0.1,
                 ease: "power2.out",
                 scrollTrigger: {
@@ -798,27 +792,35 @@ document.addEventListener("DOMContentLoaded", function(event){
      Footer 
     =================*/
 
-    gsap.from(".main-footer.footer-style-1 .footer-copyright p", {
-        duration: 2,
-        y: -500,
-        opacity: 0,
-        ease: "bounce.out",
-        scrollTrigger: {
-            trigger: ".main-footer.footer-style-1 .footer-copyright",
-        }
-    });
+    const footer_1 = document.querySelector(".main-footer.footer-style-1");
 
-    gsap.from(".main-footer.footer-style-1 .sabscribe-title", {
-        duration: 1,
-        xPercent: 100,
-        y: 500,
-        opacity: 0,
-        scale: 0,
-        ease: "power1.out",
-        scrollTrigger: {
-            trigger: ".main-footer.footer-style-1",
+    if (footer_1) {
+        gsap.from(".main-footer.footer-style-1 .footer-copyright p", {
+            duration: 2,
+            y: -500,
+            opacity: 0,
+            ease: "bounce.out",
+            scrollTrigger: {
+                trigger: ".main-footer.footer-style-1 .footer-copyright",
+            }
+        });
+
+        const newsletter_title = document.querySelector(".main-footer.footer-style-1 .sabscribe-title");
+
+        if (newsletter_title) {
+            gsap.from(".main-footer.footer-style-1 .sabscribe-title", {
+                duration: 1,
+                xPercent: 100,
+                y: 500,
+                opacity: 0,
+                scale: 0,
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: ".main-footer.footer-style-1",
+                }
+            });
         }
-    });
+    }
 
   }, false);
 

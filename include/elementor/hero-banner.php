@@ -407,10 +407,7 @@ class Protine_Hero_Banner extends \Elementor\Widget_Base {
                     <div class="hero-btn">
                         <a class="button" href="<?php echo $settings['button_link']['url']; ?>">
                             <?php echo $settings['button_text']; ?>
-                            <div class="btn-icon">
-                                <span class="icon-first"><i class="pi-medicine"></i></span>
-                                <span class="icon-second"><i class="pi-medicine"></i></span>
-                            </div>
+                            <i class="pi-medicine"></i>
                         </a>
                     </div>
                 </div>
@@ -495,10 +492,7 @@ class Protine_Hero_Banner extends \Elementor\Widget_Base {
                                     <div class="hero-btn">
                                         <a class="button" href="<?php echo $settings['button_link']['url']; ?>">
                                             <?php echo $settings['button_text']; ?>
-                                            <div class="btn-icon">
-                                                <span class="icon-first"><i class="pi-medicine"></i></span>
-                                                <span class="icon-second"><i class="pi-medicine"></i></span>
-                                            </div>
+                                            <i class="pi-medicine"></i>
                                         </a>
                                     </div>
                                     <div class="bottom-wrap">

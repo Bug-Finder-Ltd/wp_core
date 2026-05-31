@@ -221,10 +221,7 @@ class Protine_Button extends \Elementor\Widget_Base {
             <div class="single-btn style-two">
                 <a href="<?php echo esc_url($settings['button_link']['url']); ?>" class="button">
                 	<?php echo $settings['button_text']; ?>
-                	<div class="btn-icon">
-                        <span class="icon-first"><i class="pi-medicine"></i></span>
-                        <span class="icon-second"><i class="pi-medicine"></i></span>
-                    </div>
+                	<i class="pi-medicine"></i>
                 </a>
             </div>
 
@@ -233,10 +230,7 @@ class Protine_Button extends \Elementor\Widget_Base {
             <div class="single-btn style-one">
                 <a href="<?php echo esc_url($settings['button_link']['url']); ?>" class="button">
                 	<?php echo $settings['button_text']; ?>
-                	<div class="btn-icon">
-                        <span class="icon-first"><i class="pi-medicine"></i></span>
-                        <span class="icon-second"><i class="pi-medicine"></i></span>
-                    </div>
+                	<i class="pi-medicine"></i>
                 </a>
             </div>
 
