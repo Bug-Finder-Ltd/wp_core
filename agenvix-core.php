@@ -128,6 +128,11 @@ function agenvix_enqueue_scripts() {
 	wp_enqueue_script( 'split-type', plugin_dir_url( __FILE__ ) . 'assets/js/SplitType.min.js', array(), '0.3.4', true );
     wp_enqueue_script( 'circletype-type', plugin_dir_url( __FILE__ ) . 'assets/js/circletype.min.js', array(), '2.3.0', true );
 
+    wp_enqueue_script( 'throwable', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.throwable.js', array(), '2.3.0', true );
+    wp_enqueue_script( 'matter', plugin_dir_url( __FILE__ ) . 'assets/js/matter.js', array(), '2.3.0', true );
+
+    wp_enqueue_script( 'observer', plugin_dir_url( __FILE__ ) . 'assets/js/Observer.min.js', array(), '3.15.0', true );
+
     wp_enqueue_script( 'split-text', plugin_dir_url( __FILE__ ) . 'assets/js/SplitText.min.js', array(), '3.13.0', true );
 
 	wp_enqueue_script( 'gsap-flip', plugin_dir_url( __FILE__ ) . 'assets/js/Flip.min.js', array(), '3.13.0', true );

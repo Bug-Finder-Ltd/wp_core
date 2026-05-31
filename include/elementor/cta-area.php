@@ -247,8 +247,37 @@ class Provix_CTA_Area extends \Elementor\Widget_Base {
         ?>
 
 		<?php if ( $settings['provix_design_style']  == 'layout-1' ):
-            $icon_url = PROTINE_ADDONS_URL . 'assets/img/icons/footprint.png';
-            ?>
+			$circle = PROTINE_ADDONS_URL . 'assets/img/bg/cta-circle.png';
+			?>
+
+			<div class="cta-area style-one <?php echo $settings['text_alignment']; ?>">
+				<div class="overlay-image">
+					<img src="<?php echo esc_url( $circle ); ?>" alt="plugins">
+				</div>
+
+				<div class="section-title">
+					<h2 class="title"><?php echo $settings['title_text']; ?></h2>
+				</div>
+
+				<div class="section-wrapper">
+					<div class="technology-list">
+						<h3 class="title"><?php echo $settings['title_text']; ?></h3>
+						<div class="bottom">
+							<p class="description"><?php echo $settings['desctiption_text']; ?></p>
+
+                            <?php if( !empty( $settings['button_text'] ) ) : ?>
+                                <a href="<?php echo esc_url($settings['button_link']['url']); ?>" class="button">
+                                    <?php echo $settings['button_text']; ?>
+                                </a>
+                            <?php endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<?php elseif( $settings['provix_design_style']  == 'layout-2' ):
+			$icon_url = PROTINE_ADDONS_URL . 'assets/img/icons/footprint.png';
+			?>
 
             <div class="cta-container">
                <div class="cta-container-inner">
@@ -279,14 +308,6 @@ class Provix_CTA_Area extends \Elementor\Widget_Base {
                      </a>
                   </div>
                </div>
-            </div>
-
-		<?php elseif( $settings['provix_design_style']  == 'layout-2' ): ?>
-
-            <div class="section-subtitle style-one <?php echo $settings['text_alignment']; ?>">
-                <h2 class="subtitle">
-                    <span><?php echo $settings['provix_subtitle']; ?></span>
-                </h2>
             </div>
 
         <?php endif; ?>

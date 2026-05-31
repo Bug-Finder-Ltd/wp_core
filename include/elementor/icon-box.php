@@ -62,6 +62,8 @@ class Provix_Icon_Box extends \Elementor\Widget_Base {
 					'layout-4' => esc_html__( 'Layout 4', 'agenvix-core' ),
 					'layout-5' => esc_html__( 'Layout 5', 'agenvix-core' ),
 					'layout-6' => esc_html__( 'Layout 6', 'agenvix-core' ),
+					'layout-7' => esc_html__( 'Layout 7', 'agenvix-core' ),
+					'layout-8' => esc_html__( 'Layout 8', 'agenvix-core' ),
 				),
 				'default' => 'layout-1',
 			)
@@ -312,7 +314,37 @@ class Provix_Icon_Box extends \Elementor\Widget_Base {
 
 		$this->end_controls_section();
 
+        $this->start_controls_section(
+			'description_style',
+			[
+				'label' => esc_html__( 'Description', 'agenvix-core' ),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
 
+		$this->add_control(
+			'description_color',
+			[
+				'label' => esc_html__( 'Description Color', 'agenvix-core' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .box-icon .content .description' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		$this->add_control(
+			'description_margin',
+			[
+				'label' => esc_html__( 'Margin', 'agenvix-core' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
+				'selectors' => [
+					'{{WRAPPER}} .box-icon .content .description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
 
 	}
 
@@ -398,6 +430,37 @@ class Provix_Icon_Box extends \Elementor\Widget_Base {
 				<div class="content">
 					<h3 class="title"><?php echo $settings['provix_title']; ?></h3>
 					<p class="description"><?php echo $settings['provix_description']; ?></p>
+				</div>
+			</div>
+			
+		<?php } elseif ( 'layout-7' === $settings['provix_design_style'] ) { ?>
+
+			<div class="box-icon style-seven">
+				<div class="icon">
+					<?php \Elementor\Icons_Manager::render_icon( $settings['icon'], array( 'aria-hidden' => 'true' ) ); ?>
+				</div>
+				<div class="content">
+					<p class="title"><?php echo $settings['provix_title']; ?></p>
+					<?php if ( ! empty( $settings['provix_description'] ) ) : ?>
+						<p class="description"><?php echo $settings['provix_description']; ?></p>
+					<?php endif; ?>
+				</div>
+			</div>
+
+		<?php } elseif ( 'layout-8' === $settings['provix_design_style'] ) { ?>
+			
+			<div class="box-icon style-eight">
+				<div class="icon">
+					<?php \Elementor\Icons_Manager::render_icon( $settings['icon'], array( 'aria-hidden' => 'true' ) ); ?>
+					<?php if( !empty( $icon ) ) : ?>
+						<img src="<?php echo esc_url( $icon ); ?>" alt="icon">
+					<?php endif; ?>
+				</div>
+				<div class="content">
+					<h5 class="title"><?php echo $settings['provix_title']; ?></h5>
+					<?php if ( ! empty( $settings['provix_description'] ) ) : ?>
+						<p class="description"><?php echo $settings['provix_description']; ?></p>
+					<?php endif; ?>
 				</div>
 			</div>
 

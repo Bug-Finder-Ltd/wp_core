@@ -340,27 +340,33 @@ class Provix_Faq extends \Elementor\Widget_Base {
 
         <?php elseif ( $settings['provix_design_style']  == 'layout-2' ): ?>
             
-            <div class="accordion-wrap">
-                <ul class="accordion-box acc_style_h4">
-                    <?php foreach ($settings['accordions'] as $index => $item) : ?>
-                    <li class="accordion block <?php echo $index === 0 ? 'active-block' : ''; ?>">
-                        <div class="acc-btn <?php echo $index === 0 ? 'active' : ''; ?>">
-                            <div class="icon-box">
-                                <div class="icon icon_1">                                            
-                                    <i class="fas fa-plus"></i>
-                                </div>
-                                <div class="icon icon_2">
-                                    <i class="fas fa-minus"></i>
+            <div class="faq-accordion style-two">
+                <div class="accordion" id="accordionExample">
+                    <?php
+                    $count = 1;
+                    foreach ( $settings['accordions'] as $faq ) :
+                        $collapse_id = 'collapse' . $count;
+                        $show_class  = ( 1 === $count ) ? 'show' : '';
+                        $collapsed   = ( 1 === $count ) ? '' : 'collapsed';
+                        ?>
+                        <div class="accordion-item wow fadeInLeft" data-wow-delay="<?php echo esc_attr( $faq['animation_delay'] ); ?>" data-wow-duration="2000ms">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button <?php echo esc_attr( $collapsed ); ?>" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo esc_attr( $collapse_id ); ?>" aria-expanded="<?php echo ( 1 === $count ) ? 'true' : 'false'; ?>" aria-controls="<?php echo esc_attr( $collapse_id ); ?>">
+                                    <span class="number"><?php echo sprintf( '%02d', $count ); ?>.</span>
+                                    <?php echo esc_html( $faq['accordion_title'] ); ?>
+                                </button>
+                            </h2>
+                            <div id="<?php echo esc_attr( $collapse_id ); ?>" class="accordion-collapse collapse <?php echo esc_attr( $show_class ); ?>" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p><?php echo esc_html( $faq['accordion_description'] ); ?></p>
                                 </div>
                             </div>
-                            <h4><?php echo esc_html($item['accordion_title']); ?></h4>
                         </div>
-                        <div class="acc-content <?php echo $index === 0 ? 'current' : ''; ?>">
-                            <p class="text"><?php echo provix_kses($item['accordion_description']); ?></p>
-                        </div>
-                    </li>
-                    <?php endforeach; ?>
-                </ul>
+                        <?php
+                        $count++;
+                    endforeach;
+                    ?>
+                </div>
             </div>
             
         <?php endif; ?>

@@ -58,6 +58,8 @@ class Service_List extends \Elementor\Widget_Base {
                     'layout-4' => esc_html__( 'Layout 4', 'agenvix-core' ),
                     'layout-5' => esc_html__( 'Layout 5', 'agenvix-core' ),
                     'layout-6' => esc_html__( 'Layout 6', 'agenvix-core' ),
+                    'layout-7' => esc_html__( 'Layout 7', 'agenvix-core' ),
+                    'layout-8' => esc_html__( 'Layout 8', 'agenvix-core' ),
                 ],
                 'default' => 'layout-1',
             ]
@@ -658,6 +660,82 @@ class Service_List extends \Elementor\Widget_Base {
                     <?php
                     $count++;
                 endforeach;
+                ?>
+            </div>
+            
+        <?php elseif ( 'layout-7' === $settings['provix_design_style'] ): ?>
+            
+            <div class="service-list style-seven">
+                <?php
+                $count = 1;
+                foreach (  $settings['provix_service_list'] as $item ) :
+                    if ( !empty($item['provix_image']['url']) ) {
+                        $provix_image = !empty($item['provix_image']['id']) ? wp_get_attachment_image_url( $item['provix_image']['id'], '') : $item['provix_image']['url'];
+                        $provix_image_alt = get_post_meta($item["provix_image"]["id"], "_wp_attachment_image_alt", true);
+                    }
+                    ?>
+                    <div class="service-item">
+                        <?php if( !empty( $provix_image ) ) : ?>
+                            <div class="image">
+                                <img src="<?php echo esc_url($provix_image); ?>" alt="image">
+                                <a class="title" href="<?php echo esc_url($item['provix_service_link']['url']); ?>">
+                                    <?php echo $item['service_title']; ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    <?php
+                    $count++;
+                endforeach;
+                ?>
+            </div>
+
+        <?php elseif ( 'layout-8' === $settings['provix_design_style'] ): ?>
+            
+            <div class="service-list style-eight">
+                <?php
+                $count = 1;
+                $total_items = count($settings['provix_service_list']);
+
+				$eye   = PROTINE_ADDONS_URL . 'assets/img/icons/eye.gif';
+
+                // Start the first column
+                echo '<div class="service-column left-column">';
+
+                foreach (  $settings['provix_service_list'] as $item ) :
+
+                    // Handle logic for splitting into columns at the 4th item
+					if ($count == 4) {
+						echo '</div><div class="service-column right-column">';
+					}
+
+                    if ( !empty($item['provix_image']['url']) ) {
+                        $provix_image = !empty($item['provix_image']['id']) ? wp_get_attachment_image_url( $item['provix_image']['id'], 'full') : $item['provix_image']['url'];
+                        $provix_image_alt = get_post_meta($item["provix_image"]["id"], "_wp_attachment_image_alt", true);
+                    }
+                    ?>
+                    <div class="service-item">
+                        <?php if( !empty( $provix_image ) ) : ?>
+                            <div class="image">
+                                <img src="<?php echo esc_url($provix_image); ?>" alt="image">
+								<a class="view-btn" href="<?php echo esc_url($item['provix_service_link']['url']); ?>">
+									<img src="<?php echo esc_url($eye); ?>" alt="">
+								</a>
+                            </div>
+                            <div class="content">
+                                <a class="title" href="<?php echo esc_url($item['provix_service_link']['url']); ?>">
+                                    <?php echo $item['service_title']; ?>
+                                </a>
+                                <p class="description"><?php echo $item['service_description']; ?></p>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    <?php
+                    $count++;
+                endforeach;
+
+                // Close the last column
+                echo '</div>';
                 ?>
             </div>
 

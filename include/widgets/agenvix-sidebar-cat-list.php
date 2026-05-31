@@ -2,8 +2,8 @@
 Class Latest_Sidebar_Cat_List_Widget extends WP_Widget{
 
 	public function __construct(){
-		parent::__construct('provix-sidebar-cats-list', 'Provix Sidebar Category List', array(
-			'description'	=> 'Provix sidebar category list'
+		parent::__construct('provix-sidebar-cats-list', 'Agenvix Sidebar Category List', array(
+			'description'	=> 'Agenvix sidebar category list'
 		));
 	}
 

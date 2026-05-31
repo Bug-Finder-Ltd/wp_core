@@ -23,23 +23,19 @@ class Provix_Hero_Banner extends \Elementor\Widget_Base {
 		return __('Hero Banner', 'agenvix-core');
 	}
 
-	public function get_icon()
-	{
+	public function get_icon() {
 		return 'provix-icon';
 	}
 
-	public function get_categories()
-	{
+	public function get_categories() {
 		return array('agenvix-core');
 	}
 
-	public function get_script_depends()
-	{
+	public function get_script_depends() {
 		return array('agenvix-core');
 	}
 
-	protected function register_controls()
-	{
+	protected function register_controls() {
 
 		/**
 		 * Layout section
@@ -62,6 +58,8 @@ class Provix_Hero_Banner extends \Elementor\Widget_Base {
 					'layout-4' => esc_html__( 'Layout 4', 'agenvix-core' ),
 					'layout-5' => esc_html__( 'Layout 5', 'agenvix-core' ),
 					'layout-6' => esc_html__( 'Layout 6', 'agenvix-core' ),
+					'layout-7' => esc_html__( 'Layout 7', 'agenvix-core' ),
+					'layout-8' => esc_html__( 'Layout 8', 'agenvix-core' ),
 				),
 				'default' => 'layout-1',
 			)
@@ -76,66 +74,67 @@ class Provix_Hero_Banner extends \Elementor\Widget_Base {
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			)
 		);
-		$this->add_control(
-			'subtitle',
-			array(
-				'label'       => esc_html__('Subtitle', 'agenvix-core'),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__('Default Subtitle', 'agenvix-core'),
-				'label_block' => true,
-			)
-		);
-		$this->add_control(
-			'title_1',
-			array(
-				'label'       => esc_html__('Title 1', 'agenvix-core'),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__('Default Title', 'agenvix-core'),
-				'label_block' => true,
-			)
-		);
-		$this->add_control(
-			'title_2',
-			array(
-				'label'       => esc_html__('Title 2', 'agenvix-core'),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__('Default Title', 'agenvix-core'),
-				'label_block' => true,
-			)
-		);
-		$this->add_control(
-			'title_3',
-			array(
-				'label'       => esc_html__('Title 3', 'agenvix-core'),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__('Default Title', 'agenvix-core'),
-				'label_block' => true,
-			)
-		);
-		$this->add_control(
-			'description',
-			array(
-				'label'   => esc_html__('Description', 'agenvix-core'),
-				'type'    => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => esc_html__('Default Description', 'agenvix-core'),
-			)
-		);
-		$this->add_control(
-			'highlight_text1',
-			array(
-				'label'       => esc_html__( 'Highlight Text 1', 'agenvix-core' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__('Financial', 'agenvix-core'),
-			)
-		);
-		$this->add_control(
-			'highlight_text2',
-			array(
-				'label'       => esc_html__( 'Highlight Text 2', 'agenvix-core' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__('Business', 'agenvix-core'),
-			)
-		);
+
+			$this->add_control(
+				'subtitle',
+				array(
+					'label'       => esc_html__('Subtitle', 'agenvix-core'),
+					'type'        => \Elementor\Controls_Manager::TEXT,
+					'default'     => esc_html__('Default Subtitle', 'agenvix-core'),
+					'label_block' => true,
+				)
+			);
+			$this->add_control(
+				'title_1',
+				array(
+					'label'       => esc_html__('Title 1', 'agenvix-core'),
+					'type'        => \Elementor\Controls_Manager::TEXT,
+					'default'     => esc_html__('Default Title', 'agenvix-core'),
+					'label_block' => true,
+				)
+			);
+			$this->add_control(
+				'title_2',
+				array(
+					'label'       => esc_html__('Title 2', 'agenvix-core'),
+					'type'        => \Elementor\Controls_Manager::TEXT,
+					'default'     => esc_html__('Default Title', 'agenvix-core'),
+					'label_block' => true,
+				)
+			);
+			$this->add_control(
+				'title_3',
+				array(
+					'label'       => esc_html__('Title 3', 'agenvix-core'),
+					'type'        => \Elementor\Controls_Manager::TEXT,
+					'default'     => esc_html__('Default Title', 'agenvix-core'),
+					'label_block' => true,
+				)
+			);
+			$this->add_control(
+				'description',
+				array(
+					'label'   => esc_html__('Description', 'agenvix-core'),
+					'type'    => \Elementor\Controls_Manager::TEXTAREA,
+					'default' => esc_html__('Default Description', 'agenvix-core'),
+				)
+			);
+			$this->add_control(
+				'highlight_text1',
+				array(
+					'label'       => esc_html__( 'Highlight Text 1', 'agenvix-core' ),
+					'type'        => \Elementor\Controls_Manager::TEXT,
+					'default'     => esc_html__('Financial', 'agenvix-core'),
+				)
+			);
+			$this->add_control(
+				'highlight_text2',
+				array(
+					'label'       => esc_html__( 'Highlight Text 2', 'agenvix-core' ),
+					'type'        => \Elementor\Controls_Manager::TEXT,
+					'default'     => esc_html__('Business', 'agenvix-core'),
+				)
+			);
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -207,6 +206,26 @@ class Provix_Hero_Banner extends \Elementor\Widget_Base {
 				)
 			);
 
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'video_section',
+			array(
+				'label' => esc_html__('Video', 'agenvix-core'),
+				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+				'condition' => array(
+					'provix_design_style' => array('layout-8'),
+				),
+			)
+		);
+		$this->add_control(
+			'video_file',
+			[
+				'label' => esc_html__('Upload Video', 'agenvix-core'),
+				'type'  => \Elementor\Controls_Manager::MEDIA,
+				'media_types' => ['video'],
+			]
+		);
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -307,12 +326,63 @@ class Provix_Hero_Banner extends \Elementor\Widget_Base {
 		$this->end_controls_section();
 
 		$this->start_controls_section(
+			'testi_box',
+			array(
+				'label'     => esc_html__('Testimonial Box', 'agenvix-core'),
+				'tab'       => \Elementor\Controls_Manager::TAB_CONTENT,
+				'condition' => array(
+					'provix_design_style' => array( 'layout-7' ),
+				),
+			)
+		);
+
+			$this->add_control(
+				'hero_quote',
+				[
+					'label' => esc_html__( 'Quote', 'agenvix-core' ),
+					'type' => \Elementor\Controls_Manager::TEXTAREA,
+					'rows' => 8,
+					'default' => esc_html__( 'Default description', 'agenvix-core' ),
+					'placeholder' => esc_html__( 'Type your description here', 'agenvix-core' ),
+				]
+			);
+			$this->add_control(
+				'client_image',
+				[
+					'label' => esc_html__( 'Choose Image', 'agenvix-core' ),
+					'type' => \Elementor\Controls_Manager::MEDIA,
+					'default' => [
+						'url' => \Elementor\Utils::get_placeholder_image_src(),
+					],
+				]
+			);
+			$this->add_control(
+				'client_name',
+				[
+					'label' => esc_html__( 'Name', 'agenvix-core' ),
+					'type' => \Elementor\Controls_Manager::TEXT,
+					'default' => esc_html__( 'Mildred J. Roth', 'agenvix-core' ),
+					'placeholder' => esc_html__( 'Type your title here', 'agenvix-core' ),
+				]
+			);
+			$this->add_control(
+				'client_designation',
+				[
+					'label' => esc_html__( 'Designation', 'agenvix-core' ),
+					'type' => \Elementor\Controls_Manager::TEXT,
+					'default' => esc_html__( 'Director of Strategy', 'agenvix-core' ),
+					'placeholder' => esc_html__( 'Type your designation here', 'agenvix-core' ),
+				]
+			);
+		$this->end_controls_section();
+
+		$this->start_controls_section(
 			'review_box',
 			array(
 				'label'     => esc_html__('Review Box', 'agenvix-core'),
 				'tab'       => \Elementor\Controls_Manager::TAB_CONTENT,
 				'condition' => array(
-					'provix_design_style' => array( 'layout-2', 'layout-3', 'layout-4', 'layout-6' ),
+					'provix_design_style' => array( 'layout-2', 'layout-3', 'layout-4', 'layout-6', 'layout-7' ),
 				),
 			)
 		);
@@ -1186,6 +1256,116 @@ class Provix_Hero_Banner extends \Elementor\Widget_Base {
 					<img class="magnetic_effect_1_elm" src="<?php echo esc_url($hero_image1); ?>" alt="image">
 				</div>
 			</div>
+			
+		<?php elseif ( 'layout-7' === $settings['provix_design_style'] ) :
+			if (! empty($settings['hero_image1']['url'])) {
+				$hero_image1     = ! empty($settings['hero_image1']['id']) ? wp_get_attachment_image_url($settings['hero_image1']['id'], '') : $settings['hero_image1']['url'];
+				$hero_image1_alt = get_post_meta($settings['hero_image1']['id'], '_wp_attachment_image_alt', true);
+			}
+			if (! empty($settings['shape_image1']['url'])) {
+				$shape_image1     = ! empty($settings['shape_image1']['id']) ? wp_get_attachment_image_url($settings['shape_image1']['id'], '') : $settings['shape_image1']['url'];
+				$shape_image1_alt = get_post_meta($settings['shape_image1']['id'], '_wp_attachment_image_alt', true);
+			}
+			if (! empty($settings['shape_image2']['url'])) {
+				$shape_image2     = ! empty($settings['shape_image2']['id']) ? wp_get_attachment_image_url($settings['shape_image2']['id'], '') : $settings['shape_image2']['url'];
+				$shape_image2_alt = get_post_meta($settings['shape_image2']['id'], '_wp_attachment_image_alt', true);
+			}
+			if (! empty($settings['client_image']['url'])) {
+				$client_image     = ! empty($settings['client_image']['id']) ? wp_get_attachment_image_url($settings['client_image']['id'], '') : $settings['client_image']['url'];
+				$client_image_alt = get_post_meta($settings['client_image']['id'], '_wp_attachment_image_alt', true);
+			}
+			$line_1 = PROTINE_ADDONS_URL . 'assets/img/shape/line-2.png';
+			$img_bg = PROTINE_ADDONS_URL . 'assets/img/shape/hero7-img-bg.png';
+			?>
+			
+			<div class="banner-area style-seven">
+                <div class="hero-wrapper">
+                    <div class="left-column">
+                        <div class="content">
+                            <h5 class="subtitle"><?php echo $settings['subtitle']; ?></h5>
+                            <h2 class="title"><?php echo $settings['title_1']; ?></h2>
+                            <p class="description"><?php echo $settings['description']; ?></p>
+                            <div class="button-group">
+                                <a class="button" href="<?php echo esc_url($settings['button1_link']['url']); ?>">
+                                    <?php echo $settings['button1_text']; ?>
+                                </a>
+								<a class="play-btn" href="#">
+									<i class="fa-solid fa-play"></i>
+								</a>
+                            </div>
+                        </div>
+						<div class="box-wrapper">
+							<div class="testi-box">
+								<p><?php echo $settings['hero_quote']; ?></p>
+								<div class="author-info">
+									<div class="image">
+										<img src="<?php echo esc_url( $client_image ); ?>" alt="<?php echo esc_html( $client_image_alt ); ?>">
+									</div>
+									<div class="text">
+										<h4 class="name"><?php echo $settings['client_name']; ?></h4>
+										<p class="designation"><?php echo $settings['client_designation']; ?></p>
+									</div>
+								</div>
+							</div>
+							<div class="review-box">
+								<img src="<?php echo esc_url( $line_1 ); ?>" alt="line">
+								<ul class="visitor-list">
+									<?php foreach ($settings['client_images'] as $image) : ?>
+										<li><img src="<?php echo esc_attr($image['url']); ?>" alt="image"></li>
+									<?php endforeach; ?>
+									<li><a href="#">+</a></li>
+								</ul>
+								<div class="text">
+									<span class="number"><?php echo $settings['total_review']; ?></span>
+									<?php if( !empty($settings['review_title']) ) : ?>
+										<p class="title"><?php echo $settings['review_title']; ?></p>
+									<?php endif; ?>
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <div class="right-column">
+                        <div class="image">
+							<img src="<?php echo esc_url( $hero_image1 ); ?>" alt="<?php echo esc_url( $hero_image1_alt ); ?>">
+						</div>
+                    </div>
+			    </div>
+			</div>
+
+		<?php elseif ( 'layout-8' === $settings['provix_design_style'] ) :
+			if (! empty($settings['hero_image1']['url'])) {
+				$hero_image1     = ! empty($settings['hero_image1']['id']) ? wp_get_attachment_image_url($settings['hero_image1']['id'], '') : $settings['hero_image1']['url'];
+				$hero_image1_alt = get_post_meta($settings['hero_image1']['id'], '_wp_attachment_image_alt', true);
+			}
+			?>
+			
+			<div class="banner-area style-eight">
+				<div class="hero-wrapper">
+					<div class="content">
+						<div class="hero-center">
+							<h5 class="subtitle"><?php echo $settings['subtitle']; ?></h5>
+							<h2 class="title"><?php echo $settings['title_1']; ?></h2>
+						</div>
+						<div class="hero-bottom">
+							<p class="description"><?php echo $settings['description']; ?></p>
+							<div class="small-video">
+								<?php
+								if ( ! empty( $settings['video_file']['url'] ) ) {
+									echo '<video autoplay muted playsinline loop>';
+									echo '<source src="' . esc_url( $settings['video_file']['url'] ) . '" type="video/mp4">';
+									echo esc_html__('Your browser does not support the video tag.', 'agenvix-core');
+									echo '</video>';
+								}
+								?>
+							</div>
+						</div>
+						<div class="image">
+							<img src="<?php echo esc_url( $hero_image1 ); ?>" alt="<?php echo esc_attr( $hero_image1_alt ); ?>">
+						</div>
+					</div>
+				</div>
+			</div>
+
 		<?php endif; ?>
 
 		<?php

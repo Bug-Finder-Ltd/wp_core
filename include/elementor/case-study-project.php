@@ -124,6 +124,8 @@ class Provix_Case_Study_Project extends \Elementor\Widget_Base {
 					'layout-3' => esc_html__( 'Layout 3', 'agenvix-core' ),
 					'layout-4' => esc_html__( 'Layout 4', 'agenvix-core' ),
 					'layout-5' => esc_html__( 'Layout 5', 'agenvix-core' ),
+					'layout-6' => esc_html__( 'Layout 6', 'agenvix-core' ),
+					'layout-7' => esc_html__( 'Layout 7', 'agenvix-core' ),
 				),
 				'default' => 'layout-1',
 			)
@@ -257,6 +259,16 @@ class Provix_Case_Study_Project extends \Elementor\Widget_Base {
 			]
 		);
 		$repeater->add_control(
+			'portfolio_description',
+			[
+				'label' => esc_html__( 'Description', 'agenvix-core' ),
+				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'rows' => 6,
+				'default' => esc_html__( 'Default description', 'agenvix-core' ),
+				'placeholder' => esc_html__( 'Type your description here', 'agenvix-core' ),
+			]
+		);
+		$repeater->add_control(
 			'button_text',
 			[
 				'label' => esc_html__( 'Button Text', 'agenvix-core' ),
@@ -278,6 +290,16 @@ class Provix_Case_Study_Project extends \Elementor\Widget_Base {
 					// 'custom_attributes' => '',
 				],
 				'label_block' => true,
+			]
+		);
+		$repeater->add_control(
+			'portfolio_bg_image',
+			[
+				'label' => esc_html__( 'Background Image', 'agenvix-core' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
 			]
 		);
 		$this->add_control(
@@ -784,7 +806,7 @@ class Provix_Case_Study_Project extends \Elementor\Widget_Base {
                     ?>
 						<div class="left-column">
                             
-							<?php foreach ( $left_items as $item ) :
+							<?php foreach ( $left_items as $index => $item ) :
                                 if ( !empty($item['portfolio_image']['url']) ) {
                                     $portfolio_image = !empty($item['portfolio_image']['id']) ? wp_get_attachment_image_url( $item['portfolio_image']['id'], '') : $item['portfolio_image']['url'];
                                     $portfolio_image_alt = get_post_meta($item["portfolio_image"]["id"], "_wp_attachment_image_alt", true);
@@ -825,7 +847,7 @@ class Provix_Case_Study_Project extends \Elementor\Widget_Base {
 					
 						<div class="right-column">
 							
-							<?php foreach ( $right_items as $item ) :
+							<?php foreach ( $right_items as $index => $item ) :
                                 if ( !empty($item['portfolio_image']['url']) ) {
                                     $portfolio_image = !empty($item['portfolio_image']['id']) ? wp_get_attachment_image_url( $item['portfolio_image']['id'], '') : $item['portfolio_image']['url'];
                                     $portfolio_image_alt = get_post_meta($item["portfolio_image"]["id"], "_wp_attachment_image_alt", true);
@@ -1087,6 +1109,113 @@ class Provix_Case_Study_Project extends \Elementor\Widget_Base {
 							wp_reset_postdata();
 							?>
 					</div>
+				</div>
+			</div>
+
+		<?php elseif ( 'layout-6' === $settings['provix_design_style'] ) : ?>
+
+			<div class="portfolio-grid style-six">
+
+				<?php foreach (  $settings['portfolio_list'] as $index => $item ) :
+					if (! empty($item['portfolio_image']['url'])) {
+						$image     = ! empty($item['portfolio_image']['id']) ? wp_get_attachment_image_url($item['portfolio_image']['id'], 'full') : $item['portfolio_image']['url'];
+						$image_alt = get_post_meta($item['portfolio_image']['id'], '_wp_attachment_image_alt', true);
+					}
+
+					$bg_url = ! empty( $item['portfolio_bg_image']['url'] ) ? $item['portfolio_bg_image']['url'] : '';
+
+					$this->add_render_attribute(
+						'item-' . $index,
+						'class',
+						'bg one'
+					);
+
+					if ( $bg_url ) {
+
+						$background = sprintf(
+							'background-image: linear-gradient(180deg, rgba(13, 0, 38, 0.5) 50%%, rgba(16, 0, 47, 1) 100%%), url(%s);',
+							esc_url( $bg_url )
+						);
+
+						$this->add_render_attribute(
+							'item-' . $index,
+							'style',
+							$background
+						);
+					}
+					?>
+					<div class="item first">
+						<div class="outer">
+							<div class="inner">
+							<div <?php echo $this->get_render_attribute_string( 'item-' . $index ); ?>>
+								<div class="content">
+									<h2 class="section-heading"><?php echo $item['portfolio_title']; ?></h2>
+									<div class="image">
+										<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+									</div>
+									<p class="description"><?php echo $item['portfolio_description']; ?></p>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+
+			</div>
+
+		<?php elseif ( 'layout-7' === $settings['provix_design_style'] ) :
+			$eye   = PROTINE_ADDONS_URL . 'assets/img/icons/eye.gif';
+			?>
+
+			<div class="portfolio-grid style-seven">
+				<div class="wrapper">
+					<?php foreach (  $settings['portfolio_list'] as $index => $item ) :
+						if (! empty($item['portfolio_image']['url'])) {
+							$image     = ! empty($item['portfolio_image']['id']) ? wp_get_attachment_image_url($item['portfolio_image']['id'], 'full') : $item['portfolio_image']['url'];
+							$image_alt = get_post_meta($item['portfolio_image']['id'], '_wp_attachment_image_alt', true);
+						}
+
+						$bg_url = ! empty( $item['portfolio_bg_image']['url'] ) ? $item['portfolio_bg_image']['url'] : '';
+
+						$this->add_render_attribute(
+							'item-' . $index,
+							'class',
+							'slide'
+						);
+
+						if ( $bg_url ) {
+
+							$background = sprintf(
+								'background-image: linear-gradient(180deg, rgba(13, 0, 38, 0.5) 50%%, rgba(16, 0, 47, 1) 100%%), url(%s);',
+								esc_url( $bg_url )
+							);
+
+							$this->add_render_attribute(
+								'item-' . $index,
+								'style',
+								$background
+							);
+						}
+
+						?>
+
+						<div <?php echo $this->get_render_attribute_string( 'item-' . $index ); ?>>
+							
+								<div class="content">
+									<h2 class="title"><?php echo $item['portfolio_title']; ?></h2>
+									<div class="image">
+										<img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+										<a class="view-btn" href="<?php echo esc_url($item['portfolio_link']['url']); ?>">
+											<img src="<?php echo esc_url($eye); ?>" alt="">
+										</a>
+									</div>
+									<p class="description"><?php echo $item['portfolio_description']; ?></p>
+								</div>
+							
+						</div>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
 

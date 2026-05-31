@@ -2,8 +2,8 @@
 Class Latest_Sidebar_Tag_List_Widget extends WP_Widget{
 
 	public function __construct(){
-		parent::__construct('provix-sidebar-tags-list', 'Provix Sidebar Tag List', array(
-			'description'	=> 'Provix sidebar tag list'
+		parent::__construct('provix-sidebar-tags-list', 'Agenvix Sidebar Tag List', array(
+			'description'	=> 'Agenvix sidebar tag list'
 		));
 	}
 

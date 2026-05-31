@@ -68,6 +68,7 @@ class Provix_Section_Title extends \Elementor\Widget_Base {
                     'layout-6' => esc_html__( 'Layout 6', 'agenvix-core' ),
                     'layout-7' => esc_html__( 'Layout 7', 'agenvix-core' ),
                     'layout-8' => esc_html__( 'Layout 8', 'agenvix-core' ),
+                    'layout-9' => esc_html__( 'Layout 9', 'agenvix-core' ),
 				],
 				'default' => 'layout-1',
 			]
@@ -329,6 +330,14 @@ class Provix_Section_Title extends \Elementor\Widget_Base {
                 'selector' => '{{WRAPPER}} .section-title .subtitle',
             ]
         );
+        $this->add_group_control(
+			\Elementor\Group_Control_Background::get_type(),
+			[
+				'name' => 'background',
+				'types' => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} .section-title .subtitle',
+			]
+		);
         $this->add_responsive_control(
             'subtitle_margin',
             [
@@ -623,6 +632,26 @@ class Provix_Section_Title extends \Elementor\Widget_Base {
 						<h2 class="title-2"><?php echo $settings['provix_title2']; ?></h2>
 					<?php endif; ?>
 				</div>
+			</div>
+			
+		<?php elseif ( 'layout-9' === $settings['provix_design_style'] ) : ?>
+
+			<div class="section-title style-nine <?php echo $settings['text_alignment']; ?>">
+                
+                <?php if (!empty($settings['subtitle'])) : ?>
+					<h6 class="subtitle">
+						<?php echo $settings['subtitle']; ?>
+					</h6>
+				<?php endif ?>
+				
+				<?php if( !empty($settings['provix_title']) ) : ?>
+					<h2 class="title"><?php echo $settings['provix_title']; ?></h2>
+				<?php endif; ?>
+				
+				<?php if (!empty($settings['provix_description'])) : ?>
+					<p class="description"><?php echo $settings['provix_description']; ?></p>
+				<?php endif ?>
+
 			</div>
 
         <?php endif; ?>

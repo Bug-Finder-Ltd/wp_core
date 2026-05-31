@@ -48,6 +48,8 @@ class Provix_Testimonial extends \Elementor\Widget_Base {
                     'layout-4' => esc_html__( 'Layout 4', 'agenvix-core' ),
                     'layout-5' => esc_html__( 'Layout 5', 'agenvix-core' ),
                     'layout-6' => esc_html__( 'Layout 6', 'agenvix-core' ),
+                    'layout-7' => esc_html__( 'Layout 7', 'agenvix-core' ),
+                    'layout-8' => esc_html__( 'Layout 8', 'agenvix-core' ),
                 ],
                 'default' => 'layout-1',
             ]
@@ -933,6 +935,135 @@ class Provix_Testimonial extends \Elementor\Widget_Base {
                         </div>
                     </div>
                 </div>
+            </div>
+            
+        <?php elseif ( 'layout-7' === $settings['provix_design_style'] ) : ?>
+            
+            <div class="testimonial style-seven">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php foreach (  $settings['reviews_list'] as $item ) :
+                            if ( !empty($item['reviewer_image']['url']) ) {
+                                $reviewer_image = !empty($item['reviewer_image']['id']) ? wp_get_attachment_image_url( $item['reviewer_image']['id']) : $item['reviewer_image']['url'];
+                            }
+                            ?>
+                            <div class="swiper-slide testimonial-single">
+                                <div class="testimonial-content">
+                                    <div class="quote">
+                                        <p><?php echo $item['review_content']; ?></p>
+                                    </div>
+                                    <div class="client-info">
+                                        <?php if(!empty($reviewer_image)) : ?>
+                                            <img src="<?php echo esc_url($reviewer_image); ?>" alt="image">
+                                        <?php endif; ?>
+                                        <div class="text">
+                                            <h6 class="name"><?php echo $item['reviewer_name']; ?></h6>
+                                            <p class="designation"><?php echo $item['reviewer_designation']; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <div class="arrow-nav">
+                    <div class="custom-prev swiper-navigetions">
+                        <i class="icon-arrow-left"></i>
+                    </div>
+                    <div class="seperator"></div>
+                    <div class="custom-next swiper-navigetions">
+                        <i class="icon-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+        <?php elseif ( 'layout-8' === $settings['provix_design_style'] ) : ?>
+            
+            <div class="testimonial style-eight">
+				<div class="testimonial-slider-container">
+                    <div class="two-item-carousel swiper-container testimonial-slider">
+                        <div class="swiper-wrapper">
+                            <?php foreach ($settings['reviews_list'] as $index => $item) :
+                                if ( !empty($item['reviewer_image']['url']) ) {
+                                    $reviewer_image = !empty($item['reviewer_image']['id']) ? wp_get_attachment_image_url( $item['reviewer_image']['id'], '') : $item['reviewer_image']['url'];
+                                }
+                            ?>
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="client-info">
+										<div class="name-rating">
+											<?php if($item['rating'] == 5) : ?>
+												<div class="star-rating">
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+												</div>
+											<?php elseif($item['rating'] == 4) : ?>
+												<div class="star-rating">
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+												</div>
+											<?php elseif($item['rating'] == 3) : ?>
+												<div class="star-rating">
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+												</div>
+											<?php elseif($item['rating'] == 2) : ?>
+												<div class="star-rating">
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+												</div>
+											<?php elseif($item['rating'] == 1) : ?>
+												<div class="star-rating">
+													<i class="fa-solid fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+													<i class="fa-regular fa-star"></i>
+												</div>
+											<?php endif; ?>
+                                            <div class="bio">
+												<h5 class="name"><?php echo $item['reviewer_name']; ?></h5>
+												<p class="designation"><?php echo $item['reviewer_designation']; ?></p>
+											</div>
+										</div>
+                                        <?php if( !empty( $reviewer_image ) ) : ?>
+                                            <img src="<?php echo esc_url( $reviewer_image ); ?>" alt="image">
+                                        <?php endif; ?>
+                                    </div>
+
+                                    <div class="icon">
+										<i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                    <p class="quote"><?php echo $item['review_content']; ?></p>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <div class="arrow-nav">
+                        <div class="custom-prev swiper-navigetions">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div class="custom-next swiper-navigetions">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <?php if( !empty( $settings['testi_title'] ) ) : ?>
+                    <h2 class="title"><?php echo $settings['testi_title']; ?></h2>
+                <?php endif; ?>
             </div>
 
         <?php endif; ?>

@@ -322,6 +322,98 @@
 			}
 		});
 	}
+	
+    // Style Seven
+    
+    if ($('.testimonial.style-seven .swiper-container').length) {
+		var testi6Carousel = new Swiper('.testimonial.style-seven .swiper-container', {
+			preloadImages: false,
+			loop: true,
+			centeredSlides: false,
+			resistance: true,
+			resistanceRatio: 0.6,
+			slidesPerView: 2,
+			speed: 1400,
+			spaceBetween: 147,
+			parallax: false,
+			effect: "slide",
+			active: 'active',
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
+			autoplay: false,
+			pagination: {
+				el: '.slider__pagination',
+				clickable: true,
+				type: 'fraction',
+			},
+			navigation: {
+				nextEl: '.custom-next',
+				prevEl: '.custom-prev',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 1,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1400: {
+					slidesPerView: 2,
+				},
+			}
+		});
+	}
+
+	// Style Eight
+
+	if ($('.testimonial.style-eight .swiper-container').length) {
+		var testi6Carousel = new Swiper('.testimonial.style-eight .swiper-container', {
+			preloadImages: false,
+			loop: true,
+			centeredSlides: false,
+			resistance: true,
+			resistanceRatio: 0.6,
+			slidesPerView: 2,
+			speed: 1400,
+			spaceBetween: 30,
+			parallax: false,
+			effect: "slide",
+			active: 'active',
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
+			autoplay: false,
+			pagination: {
+				el: '.slider__pagination',
+				clickable: true,
+				type: 'fraction',
+			},
+			navigation: {
+				nextEl: '.custom-next',
+				prevEl: '.custom-prev',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 1,
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				1400: {
+					slidesPerView: 3,
+				},
+			}
+		});
+	}
 
 	/*
 	 * Portfolio
@@ -389,6 +481,8 @@
 			}
 		}
 	});
+
+
 
 })(jQuery);
 

@@ -59,6 +59,8 @@ class Provix_Blog_Post extends \Elementor\Widget_Base {
 					'layout-3' => esc_html__( 'Layout 3', 'agenvix-core' ),
 					'layout-4' => esc_html__( 'Layout 4', 'agenvix-core' ),
 					'layout-5' => esc_html__( 'Layout 5', 'agenvix-core' ),
+					'layout-6' => esc_html__( 'Layout 6', 'agenvix-core' ),
+					'layout-7' => esc_html__( 'Layout 7', 'agenvix-core' ),
 				),
 				'default' => 'layout-1',
 			)
@@ -905,6 +907,103 @@ class Provix_Blog_Post extends \Elementor\Widget_Base {
 						wp_reset_postdata()
 					?>
 					
+				</div>
+			</div>
+			
+		<?php elseif ( 'layout-6' === $settings['provix_design_style'] ) : ?>
+            
+            <div class="blog-posts style-six">
+				<div class="item-wrapper">
+					<?php if ( $query->have_posts() ) : ?>
+						<?php
+						$i = 0;
+						while ( $query->have_posts() ) :
+							$query->the_post();
+							global $post;
+							$category = get_the_terms( $post->ID, 'category' );
+                            
+							$delay = 100 + ( $i * 500 );
+							?>
+                            
+							
+								<div class="blog-item wow fadeInUp" data-wow-delay="<?php echo esc_attr( $delay ); ?>ms" data-wow-duration="2000ms">
+									<div class="blog-content">
+										<a class="title" href="<?php the_permalink(); ?>">
+											<?php echo wp_trim_words( get_the_title(), $settings['provix_blog_title_word'], '' ); ?>
+										</a>
+										<h6 class="date">
+                                            <span></span>
+                                            <?php echo get_the_date( 'd F, Y' ); ?>
+										</h6>
+									</div>
+									<div class="blog-image">
+										<a href="<?php the_permalink(); ?>">
+											<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
+												<img src="<?php the_post_thumbnail_url(); ?>" alt="Post image" />
+											<?php endif; ?>
+										</a>
+										<?php the_category(); ?>
+									</div>
+								</div>
+							
+                            
+							<?php
+							++$i;
+						endwhile;
+						wp_reset_postdata();
+						?>
+					<?php endif; ?>
+				</div>
+			</div>
+
+		<?php elseif ( 'layout-7' === $settings['provix_design_style'] ) : ?>
+			
+			<div class="blog-posts style-seven">
+				<div class="item-wrapper">
+					<?php if ( $query->have_posts() ) : ?>
+						<?php
+						$i = 0;
+						while ( $query->have_posts() ) :
+							$query->the_post();
+							global $post;
+							$category = get_the_terms( $post->ID, 'category' );
+                            
+							$delay = 100 + ( $i * 500 );
+
+							$content = get_the_content();
+							$word_count = str_word_count(strip_tags($content));
+							$reading_time = ceil($word_count / 200); // 200 wpm
+							?>
+								<div class="blog-item wow fadeInUp" data-wow-delay="<?php echo esc_attr( $delay ); ?>ms" data-wow-duration="2000ms">
+									<div class="blog-image">
+										<a href="<?php the_permalink(); ?>">
+											<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
+												<img src="<?php the_post_thumbnail_url(); ?>" alt="Post image" />
+											<?php endif; ?>
+										</a>
+									</div>
+									<div class="blog-content">
+										<h6 class="date">
+											<?php echo get_the_date( 'd F, Y' ); ?>
+										</h6>
+										<a class="title" href="<?php the_permalink(); ?>">
+											<?php echo wp_trim_words( get_the_title(), $settings['provix_blog_title_word'], '' ); ?>
+										</a>
+									</div>
+									<div class="bottom-area">
+										<a href="<?php the_permalink(); ?>">
+											<?php esc_html_e("Read More"); ?>
+											<i class="fa-regular fa-arrow-right"></i>
+										</a>
+										<p><?php echo sprintf( esc_html__( 'Read Time: %d min', 'agenvix-core' ), $reading_time ); ?></p>
+									</div>
+								</div>
+							<?php
+							++$i;
+						endwhile;
+						wp_reset_postdata();
+						?>
+					<?php endif; ?>
 				</div>
 			</div>
 

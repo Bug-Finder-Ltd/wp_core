@@ -13,18 +13,15 @@ if (! defined('ABSPATH')) exit;
  */
 class Provix_Button extends \Elementor\Widget_Base {
 
-	public function get_name()
-	{
+	public function get_name() {
 		return 'next-button';
 	}
 
-	public function get_title()
-	{
+	public function get_title() {
 		return __('Button', 'agenvix-core');
 	}
 
-	public function get_icon()
-	{
+	public function get_icon() {
 		return 'provix-icon';
 	}
 
@@ -62,6 +59,7 @@ class Provix_Button extends \Elementor\Widget_Base {
 					'layout-3' => esc_html__( 'Layout 3', 'agenvix-core' ),
 					'layout-4' => esc_html__( 'Layout 4', 'agenvix-core' ),
 					'layout-5' => esc_html__( 'Layout 5', 'agenvix-core' ),
+					'layout-6' => esc_html__( 'Layout 6', 'agenvix-core' ),
 				],
 				'default' => 'layout-1',
 			]
@@ -290,7 +288,17 @@ class Provix_Button extends \Elementor\Widget_Base {
 					</a>
 				</div>
 			</div>
-
+			
+		<?php elseif ( 'layout-6' === $settings['provix_design_style'] ) : ?>
+            
+			<div class="single-btn style-six">
+				<a href="<?php echo esc_url($settings['button_link']['url']); ?>" class="button">
+					<span class="button-text">
+						<?php echo $settings[ 'button_text' ]; ?>
+					</span>
+				</a>
+			</div>
+            
 		<?php endif; ?>
 
 		<?php

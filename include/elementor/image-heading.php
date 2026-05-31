@@ -99,10 +99,30 @@ class Image_Heading extends \Elementor\Widget_Base {
             ]
         );
 
-		$this->add_control(
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+			'media_section',
+			[
+				'label' => esc_html__( 'Media', 'agenvix-core' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+        $this->add_control(
 			'heading_image',
 			[
-				'label' => esc_html__( 'Choose Image', 'agenvix-core' ),
+				'label' => esc_html__( 'Image 1', 'agenvix-core' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+        $this->add_control(
+			'heading_image2',
+			[
+				'label' => esc_html__( 'Image 2', 'agenvix-core' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -110,7 +130,19 @@ class Image_Heading extends \Elementor\Widget_Base {
 			]
 		);
 
-        $this->end_controls_section();
+		$this->add_control(
+			'heading_video',
+			[
+				'label' => esc_html__( 'Choose Video', 'agenvix-core' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+                'media_types' => [ 'video' ],
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+
+		$this->end_controls_section();
 
         /**
          * Style section
@@ -230,6 +262,7 @@ class Image_Heading extends \Elementor\Widget_Base {
 		<?php if ( $settings['provix_design_style']  == 'layout-1' ):
 			$text  = $settings['heading_text'];
 			$image = $settings['heading_image']['url'];
+            $video = ! empty( $settings['heading_video']['url'] ) ? $settings['heading_video']['url'] : '';
             ?>
 
             <div class="inline-text-image style-one <?php echo $settings['text_alignment']; ?>">
@@ -238,12 +271,62 @@ class Image_Heading extends \Elementor\Widget_Base {
 					return;
 				}
 
-				$image_html = '<span class="image-wrap"><img src="' . esc_url( $image ) . '" alt=""></span>';
+                // Image HTML
+				$image_html = '';
+				if ( $image ) {
+					$image_html = '<span class="image-wrap"><img src="' . esc_url( $image ) . '" alt=""></span>';
+				}
 
-				$output = str_replace( '{image}', $image_html, $text );
+				// Video HTML (inline)
+				$video_html = '';
+				if ( $video ) {
+					$video_html = '<span class="video-wrap">
+						<video muted autoplay loop playsinline>
+							<source src="' . esc_url( $video ) . '" type="video/mp4">
+						</video>
+					</span>';
+				}
+
+				// Replace placeholders
+				$output = str_replace(
+					[ '{image}', '{video}' ],
+					[ $image_html, $video_html ],
+					$text
+				);
+
+				// Define allowed HTML tags including <source>
+				$allowed_html = array_merge(
+					wp_kses_allowed_html( 'post' ),
+					[
+						'source' => [
+							'src'  => true,
+							'type' => true,
+						],
+						'video' => [
+							'muted'       => true,
+							'autoplay'    => true,
+							'loop'        => true,
+							'playsinline' => true,
+							'controls'    => true,
+							'width'       => true,
+							'height'      => true,
+							'class'       => true,
+						],
+						'span' => [
+							'class' => true,
+						],
+						'img' => [
+							'src'   => true,
+							'alt'   => true,
+							'class' => true,
+							'width' => true,
+							'height'=> true,
+						],
+					]
+				);
 				?>
 				<h2 class="heading">
-					<?php echo wp_kses_post( $output ); ?>
+					<?php echo wp_kses( $output, $allowed_html ); ?>
 				</h2>
 
 				<div class="full-img">
@@ -251,12 +334,29 @@ class Image_Heading extends \Elementor\Widget_Base {
 				</div>
             </div>
 
-		<?php elseif( $settings['provix_design_style']  == 'layout-2' ): ?>
+		<?php elseif( $settings['provix_design_style']  == 'layout-2' ):
+            $text  = $settings['heading_text'];
+			$image = $settings['heading_image']['url'];
+            $image2 = $settings['heading_image2']['url'];
+            ?>
 
-            <div class="section-subtitle style-one <?php echo $settings['text_alignment']; ?>">
-                <h2 class="subtitle">
-                    <span><?php echo $settings['provix_subtitle']; ?></span>
-                </h2>
+            <div class="inline-text-image style-two <?php echo $settings['text_alignment']; ?>">
+                <?php
+				if ( empty( $text ) ) {
+					return;
+				}
+
+                $image_html = '<span class="image-wrap">';
+                $image_html .= '<img src="' . esc_url( $image ) . '" alt="">';
+                $image_html .= '<img class="image-2" src="' . esc_url( $image2 ) . '" alt="">';
+                $image_html .= '</span>';
+
+				$output = str_replace( '{image}', $image_html, $text );
+				?>
+				<h2 class="heading">
+					<?php echo wp_kses_post( $output ); ?>
+				</h2>
+
             </div>
 
         <?php endif; ?>

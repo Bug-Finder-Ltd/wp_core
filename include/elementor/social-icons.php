@@ -52,6 +52,7 @@ class Social_Icons extends \Elementor\Widget_Base {
 				'options' => [
 					'layout-1' => esc_html__( 'Layout 1', 'agenvix-core' ),
 					'layout-2' => esc_html__( 'Layout 2', 'agenvix-core' ),
+					'layout-3' => esc_html__( 'Layout 3', 'agenvix-core' ),
 				],
 				'default' => 'layout-1',
 			]
@@ -275,7 +276,17 @@ class Social_Icons extends \Elementor\Widget_Base {
 					</a>
 				<?php endforeach; ?>
 			</div>
+
+		<?php elseif ( $settings['provix_design_style']  == 'layout-3' ) : ?>
 			
+			<div class="social-icons style-three">
+				<?php foreach ( $settings['list'] as $item ) : ?>
+					<a href="<?php echo esc_url( $item['social_media_link']['url'] ); ?>">
+						<?php echo $item['social_media_name']; ?>
+					</a>
+				<?php endforeach; ?>
+			</div>
+
 		<?php endif; ?>
 
 		<?php

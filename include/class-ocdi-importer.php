@@ -53,6 +53,18 @@ class Agenvix_OCDI_Demo_Importer {
 				'screenshot'   => plugins_url( 'assets/img/demo/home-3.jpg', dirname(__FILE__) ),
 				'preview_link' => 'https://wp-agenvix.bugfinder.app/it-solution/',
 			),
+			'provix_demo_home_7' => array(
+				'title'        => __( 'Life Coach', 'agenvix-core' ),
+				'page'         => __( 'life-coach', 'agenvix-core' ),
+				'screenshot'   => plugins_url( 'assets/img/demo/home-7.jpg', dirname(__FILE__) ),
+				'preview_link' => 'https://wp-agenvix.bugfinder.app/life-coach/',
+			),
+			'provix_demo_home_8' => array(
+				'title'        => __( 'Tech Agency', 'agenvix-core' ),
+				'page'         => __( 'tech-agency', 'agenvix-core' ),
+				'screenshot'   => plugins_url( 'assets/img/demo/home-8.jpg', dirname(__FILE__) ),
+				'preview_link' => 'https://wp-agenvix.bugfinder.app/tech-agency/',
+			),
 		);
 
 		$config = [];

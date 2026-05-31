@@ -158,7 +158,6 @@ class Agenvix_Core_Plugin {
 			'button',
 			'social-icons',
 			'tabs',
-			'download-button',
 			'review-box',
 			'video-icon',
 			'video-box',
@@ -194,6 +193,8 @@ class Agenvix_Core_Plugin {
 			'woo-product-grid',
 			'navigation-menu',
 			'menu-sidebar-canvas',
+			'footer-gallery',
+			'skill-list'
 		];
 	}
 

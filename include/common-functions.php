@@ -172,6 +172,8 @@ function provix_get_allowed_html_desc($level = 'basic')
     }
 
     $tags_str = '<' . implode('>,<', array_keys(provix_get_allowed_html_tags_core($level))) . '>';
+    
+    /* translators: %1$s: list of allowed HTML tags wrapped in <code> */
     return sprintf(__('This input field has support for the following HTML tags: %1$s', 'agenvix-core'), '<code>' . esc_html($tags_str) . '</code>');
 }
 
@@ -600,8 +602,9 @@ function provix_get_share_buttons( $args = array() ) {
         }
 
         if ( $share_url ) {
+            /* translators: %s: social network name (e.g., Facebook, Twitter) */
             $aria_label = sprintf( __( 'Share on %s', 'agenvix-core' ), ucfirst( $network ) );
-
+            
             $items[] = sprintf(
                 '<li><a href="%1$s" target="_blank" rel="nofollow noopener noreferrer" aria-label="%2$s">%3$s</a></li>',
                 esc_url( $share_url ),

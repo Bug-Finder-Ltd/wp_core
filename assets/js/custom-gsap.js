@@ -1,6 +1,6 @@
 // wait until DOM is ready
 document.addEventListener("DOMContentLoaded", function (event) {
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin, Observer);
 
 	//wait until images, links, fonts, stylesheets, and js is loaded
 	window.addEventListener(
@@ -622,6 +622,180 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 		}
 
+		// Style Six
+
+		const portfolio_6 = document.querySelector(".portfolio-grid.style-six");
+
+		if(portfolio_6){
+
+			let sections = document.querySelectorAll(".portfolio-grid.style-six .item"),
+			images = document.querySelectorAll(".portfolio-grid.style-six .bg"),
+			headings = gsap.utils.toArray(".portfolio-grid.style-six .section-heading"),
+			outerWrappers = gsap.utils.toArray(".portfolio-grid.style-six .outer"),
+			innerWrappers = gsap.utils.toArray(".portfolio-grid.style-six .inner"),
+			splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
+			currentIndex = -1,
+			wrap = gsap.utils.wrap(0, sections.length),
+			animating;
+
+			gsap.set(outerWrappers, { yPercent: 100 });
+			gsap.set(innerWrappers, { yPercent: -100 });
+
+			function gotoSection(index, direction) {
+			index = wrap(index); // make sure it's valid
+			animating = true;
+			let fromTop = direction === -1,
+				dFactor = fromTop ? -1 : 1,
+				tl = gsap.timeline({
+					defaults: { duration: 1.25, ease: "power1.inOut" },
+					onComplete: () => animating = false
+				});
+			if (currentIndex >= 0) {
+				// The first time this function runs, current is -1
+				gsap.set(sections[currentIndex], { zIndex: 0 });
+				tl.to(images[currentIndex], { yPercent: -0 * dFactor })
+				.set(sections[currentIndex], { autoAlpha: 0 });
+			}
+			gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+			tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
+				yPercent: i => i ? -100 * dFactor : 100 * dFactor
+				}, { 
+				yPercent: 0 
+				}, 0)
+				.fromTo(images[index], { yPercent: 0 * dFactor }, { yPercent: 0 }, 0)
+				.fromTo(splitHeadings[index].chars, { 
+					autoAlpha: 0, 
+					yPercent: 150 * dFactor
+				}, {
+					autoAlpha: 1,
+					yPercent: 0,
+					duration: 1,
+					ease: "power2",
+					stagger: {
+					each: 0.02,
+					from: "random"
+					}
+				}, 0.2);
+
+			currentIndex = index;
+			}
+
+			let observer;
+
+			observer = Observer.create({
+			target: ".portfolio-grid.style-six",
+			type: "wheel,touch,pointer",
+			wheelSpeed: -1,
+			tolerance: 10,
+			preventDefault: true,
+
+			onDown: () => {
+				if (animating) return;
+
+				// if FIRST slide → allow normal scroll
+				if (currentIndex === 0) {
+				observer.disable();
+				return;
+				}
+
+				gotoSection(currentIndex - 1, -1);
+			},
+
+			onUp: () => {
+				if (animating) return;
+
+				// if LAST slide → allow normal scroll
+				if (currentIndex === sections.length - 1) {
+				observer.disable();
+				return;
+				}
+
+				gotoSection(currentIndex + 1, 1);
+			}
+			});
+
+			gotoSection(0, 1);
+
+			window.addEventListener("scroll", () => {
+			const slider = document.querySelector(".portfolio-grid.style-six");
+			const rect = slider.getBoundingClientRect();
+
+			const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+			if (isVisible) {
+				observer.enable();
+			}
+			});
+
+		}
+
+		// Style Seven
+
+		const slides = document.querySelectorAll(".portfolio-grid.style-seven .wrapper > div");
+
+		slides.forEach((slide, index) => {
+
+			const isLast = index === slides.length - 1;
+
+			ScrollTrigger.create({
+			trigger: slide,
+			start: "top top",
+			end: isLast ? "top top" : "+=100%", // last slide ends immediately
+			pin: true,
+			pinSpacing: false,
+			markers: false // remove in production
+			});
+
+		});
+
+		let eye_btn = document.querySelectorAll(".portfolio-grid.style-seven .slide .image");
+
+		eye_btn.forEach((hoverArea) => {
+
+			let btn = hoverArea.querySelector(".view-btn");
+
+			// initial hidden state
+			gsap.set(btn, { opacity: 0, scale: 0.5 });
+
+			let xTo = gsap.quickTo(btn, "x", { duration: 0.4, ease: "power3" });
+			let yTo = gsap.quickTo(btn, "y", { duration: 0.4, ease: "power3" });
+
+			function onMove(e) {
+				let rect = hoverArea.getBoundingClientRect();
+
+				let x = e.clientX - rect.left - rect.width / 2;
+				let y = e.clientY - rect.top - rect.height / 2;
+
+				xTo(x);
+				yTo(y);
+			}
+
+			function onEnter() {
+				gsap.to(btn, {
+				opacity: 1,
+				scale: 1,
+				duration: 0.3,
+				ease: "power2.out"
+				});
+			}
+
+			function onLeave() {
+				xTo(0);
+				yTo(0);
+
+				gsap.to(btn, {
+				opacity: 0,
+				scale: 0.5,
+				duration: 0.3,
+				ease: "power2.in"
+				});
+			}
+
+			hoverArea.addEventListener("mouseenter", onEnter);
+			hoverArea.addEventListener("mousemove", onMove);
+			hoverArea.addEventListener("mouseleave", onLeave);
+		});
+
 		/*=========================
 		 Image Heading 
 		===========================*/
@@ -630,8 +804,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 		if(imageHeading1){
 			const box1 = imageHeading1.querySelector(".image-wrap img");
+			const video = imageHeading1.querySelector(".video-wrap video");
 			const box2 = imageHeading1.querySelector(".full-img");
-			const flip = Flip.fit(box1, box2, {
+
+			const source = box1 || video;
+
+			if (!source || !box2) return;
+
+			const flip = Flip.fit(source, box2, {
 				scale: true,
 				ease: "none",
 				duration: 1,
@@ -650,6 +830,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					flip.progress(self.progress);
 				}
 			});
+		}
+
+		// Style Two
+
+		const image_heading2 = document.querySelector(".inline-text-image.style-two");
+
+		if (image_heading2) {
+
+			const imageWrap = image_heading2.querySelector(".image-wrap");
+			const img2 = image_heading2.querySelector(".image-wrap .image-2");
+
+			gsap.from(img2, {
+				y: -400,
+				scrollTrigger: {
+					trigger: img2,
+					start: "top-=100 top",
+					scrub: true,
+				}
+
+			})
 		}
 
 		/*================
@@ -780,6 +980,56 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				});
 			});
 		}
+
+		// Style Eight
+
+		let items = document.querySelectorAll(".service-list.style-eight .service-item .image");
+
+		items.forEach((hoverArea) => {
+
+			let btn = hoverArea.querySelector(".view-btn");
+
+			// initial hidden state
+			gsap.set(btn, { opacity: 0, scale: 0.5 });
+
+			let xTo = gsap.quickTo(btn, "x", { duration: 0.4, ease: "power3" });
+			let yTo = gsap.quickTo(btn, "y", { duration: 0.4, ease: "power3" });
+
+			function onMove(e) {
+				let rect = hoverArea.getBoundingClientRect();
+
+				let x = e.clientX - rect.left - rect.width / 2;
+				let y = e.clientY - rect.top - rect.height / 2;
+
+				xTo(x);
+				yTo(y);
+			}
+
+			function onEnter() {
+				gsap.to(btn, {
+				opacity: 1,
+				scale: 1,
+				duration: 0.3,
+				ease: "power2.out"
+				});
+			}
+
+			function onLeave() {
+				xTo(0);
+				yTo(0);
+
+				gsap.to(btn, {
+				opacity: 0,
+				scale: 0.5,
+				duration: 0.3,
+				ease: "power2.in"
+				});
+			}
+
+			hoverArea.addEventListener("mouseenter", onEnter);
+			hoverArea.addEventListener("mousemove", onMove);
+			hoverArea.addEventListener("mouseleave", onLeave);
+		});
 
 		/*============
 		Hero 1
@@ -1117,6 +1367,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		}
 
 		/*============
+		 Hero 8
+		==============*/
+
+		const hero_8 = document.querySelector(".banner-area.style-eight");
+
+		if (hero_8) {
+			const imgWrapper = hero_8.querySelector(".image");
+			const img = hero_8.querySelector("img");
+
+			gsap.to(img, {
+				yPercent: 100,
+				scrollTrigger: {
+					trigger: imgWrapper,
+					start: "top top",
+					end: "bottom top",
+					scrub: true,
+					markers: false,
+				}
+			});
+		}
+
+		/*============
 		 Info Box
 		==============*/
 
@@ -1266,41 +1538,100 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
       }
 
-      /*===============
-     CTA
-    =================*/
+		/*===============
+		 CTA
+		=================*/
 
-      mm.add("(min-width: 1025px)", () => {
-        const tl2 = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".cta-container",
-            start: "top center",
-            end: "bottom top",
-            scrub: 1,
-          },
-        });
+	  	const cta_1 = document.querySelector(".cta-area.style-one");
 
-        tl2.fromTo(
-          ".cta-container .content",
-          { scale: 0, transformOrigin: "center center" },
-          { scale: 1, duration: 1, ease: "power3.out" },
-        );
+		if(cta_1){
+			gsap.fromTo(".cta-area.style-one .overlay-image img",
+				{
+					scale: 1,
+					opacity: 1
+				},
+				{
+					scale: 11,
+					transformOrigin: "center center",
+					duration: 1,
+					scrollTrigger: {
+						trigger: ".cta-area.style-one",
+						start: "top center",
+					}
+					
+				}
+			);
 
-        gsap.utils.toArray(".cta-image-box img").forEach((img) => {
-          tl2.from(
-            img,
-            {
-              top: "50%",
-              left: "50%",
-              x: "-50%",
-              y: "-50%",
-              duration: 0.7,
-              ease: "power2.out",
-            },
-            0,
-          );
-        });
-      });
+			gsap.fromTo(".cta-area.style-one .section-title",
+				{
+					scale: 1,
+					opacity: 1
+				},
+				{
+					scale: 0.5,
+					opacity: 0,
+					transformOrigin: "center center",
+					duration: 0.3,
+					scrollTrigger: {
+						trigger: ".cta-area.style-one",
+						start: "top center",
+					}
+					
+				}
+			);
+
+			gsap.fromTo(".cta-area.style-one .section-wrapper",
+				{
+					
+					opacity: 0,
+					y: 100,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 1,
+					scrollTrigger: {
+						trigger: ".cta-area.style-one",
+						start: "top center",
+					}
+					
+				}
+			);
+
+		}
+
+		// Style Two
+
+		mm.add("(min-width: 1025px)", () => {
+			const tl2 = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".cta-container",
+					start: "top center",
+					end: "bottom top",
+					scrub: 1,
+				},
+			});
+
+			tl2.fromTo(
+				".cta-container .content",
+				{ scale: 0, transformOrigin: "center center" },
+				{ scale: 1, duration: 1, ease: "power3.out" },
+			);
+
+			gsap.utils.toArray(".cta-image-box img").forEach((img) => {
+				tl2.from(
+					img, {
+						top: "50%",
+						left: "50%",
+						x: "-50%",
+						y: "-50%",
+						duration: 0.7,
+						ease: "power2.out",
+					},
+					0,
+				);
+			});
+		});
 
 		/*===============
 		 Single Button
